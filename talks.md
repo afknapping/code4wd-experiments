@@ -12,25 +12,27 @@ layout: default
 
 {% for talk in site.talks %}
 
-<div id="{{ talk.talk_id }}" class="c4wd-talks-entry">
+<div id="{{ talk.talk_id }}" class="c4wd-talks-entry"> </div> <!-- c4wd-talks-entry -->
 
 
+## {{ talk.title }}
 
-## {{ talk.title }} dfsd
-
-- {{ talk.talk_id }}
-- {{ talk.speaker_id }}
+- <a href="{{ '/speakers#' | append: talk.speaker_id | prepend: site.baseurl }}" class="c4wd-xxxx">by {{ talk.speaker }}</a>
 - image
 - abstract
 - slides
 - video
-- <a href="/speakers#{{ talk.speaker_id }}" class="c4wd-xxxx">{{ talk.speaker }}</a>
+
+
   - bio, links
-- <a href="/schedule#{{ talk.id }}" class="c4wd-xxxx">see on schedule</a>
+
+<a href="{{ '/schedule#' | append: talk.talk_id | prepend: site.baseurl }}" class="c4wd-xxxx">locate this talk on the schedule...</a>
 
 
 
-</div> <!-- c4wd-talks-entry -->
+
+
+
 
 
 {% endfor %}
