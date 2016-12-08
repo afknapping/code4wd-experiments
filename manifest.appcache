@@ -1,0 +1,24 @@
+---
+---
+CACHE MANIFEST
+
+# taken from https://github.com/ebello/jekyll-perf/blob/master/manifest.appcache
+
+# rev {{ site.time }}
+
+
+CACHE:
+
+{% comment %} {% asset_path all.css %} {% endcomment %}
+
+{% for page in site.pages %}{% if page.url != '/manifest.appcache' %}{{ page.url }}{% endif %}
+{% endfor %}
+{% for item in site.images %}{{ item.url }}
+{% endfor %}
+{% for item in site.scripts %}{{ item.url }}
+{% endfor %}
+
+NETWORK:
+*
+http://*
+https://*

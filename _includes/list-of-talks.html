@@ -1,0 +1,36 @@
+
+
+
+{% for talk in site.talks %}
+
+<div id="{{ talk.talk_id }}" class="c4wd-talks-entry">
+
+
+  <h2>{{ talk.title }}</h2>
+
+  <ul>
+    <li>
+      <a href="{{ '/speakers#' | append: talk.speaker_id | prepend: site.baseurl }}" class="c4wd-xxxx">by {{ talk.speaker }}</a>
+    </li>
+    <li>image</li>
+    <li>abstract</li>
+    <li>slides</li>
+    <li>video</li>
+  </ul>
+
+  <a href="{{ '/schedule#' | append: talk.talk_id | prepend: site.baseurl }}" class="c4wd-xxxx">locate this talk on the schedule...</a>
+
+</div> <!-- c4wd-talks-entry -->
+
+
+
+{% endfor %}
+
+{% for page in site.pages %}
+
+{% if page.url != '/manifest.appcache' %}
+
+{{ page.url }}
+
+{% endif %}
+{% endfor %}
