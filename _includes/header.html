@@ -12,10 +12,24 @@
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
     <nav role="navigation" class="c4wd-nav">
-          {% for section in page.sections %}
-            <!-- change span to li -->
-            <span><a href="#{{ section | slugify }}" class="c4wd-nav-item">{{ section }}</a></span>
-          {% endfor %}
+
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger" class="c4wd-nav-item">X</label>
+
+          <span><a href="#speakers" class="c4wd-nav-item">Speakers</a></span>
+          <span><a href="#talks" class="c4wd-nav-item">Talks</a></span>
+          <span><a href="#notes" class="c4wd-nav-item">Notes</a></span>
+          <span><a href="#ticket" class="c4wd-nav-item">Ticket</a></span>
+
+
+          <div id="burger-menu">
+              {% for section in page.sections %}
+                <!-- change span to li -->
+                <div><a href="#{{ section | slugify }}" class="c4wd-">{{ section }}</a></div>
+              {% endfor %}
+
+          </div>
+
     </nav>
 
 
@@ -26,6 +40,42 @@
 </header>
 
 <style type="text/css">
+
+#nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+
+label[for="nav-trigger"] {
+  /* critical positioning styles */
+  /*position: absolute;*/
+  /*left: 15px; top: 15px;*/
+  z-index: 2;
+
+  /* non-critical apperance styles */
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-size: contain;
+}
+
+
+#burger-menu {
+  position: absolute;
+  bottom: -330px;
+  background-color: white;
+  padding: 1em;
+  border: 2px solid black;
+  line-height: 40px;
+
+}
+.nav-trigger:checked ~ #burger-menu {
+  bottom: 80px;
+}
+
 
 [class^='c4wd'] {
 
@@ -46,12 +96,14 @@
   z-index: 1000;
   bottom: 0;
   max-width: 400px;
+  width: 93%;
 }
+
 
 .c4wd-nav-item {
   display: inline-block;
-  float: left;
-  width: 48px;
+  /*float: left;*/
+  width: 18%;
   height: 48px;
   line-height: 48px;
   font-size: 10px;
