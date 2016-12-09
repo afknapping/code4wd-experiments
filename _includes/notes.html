@@ -1,0 +1,42 @@
+
+<p>Take notes here, they are persisted to localstorage...</p>
+
+
+<textarea id="notes-area" onKeyUp="keyWasPressed(event)" style="width: 30em; height: 20em;">notes</textarea>
+
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onkeyup -->
+
+<script>
+
+window.onload = function () {
+  data = read ( "c4wd" );
+  document.getElementById("notes-area").innerHTML = data;
+}
+
+
+function keyWasPressed(event) {
+  console.log(event.keyCode);
+  data = document.getElementById("notes-area").value;
+  // console.log(data);
+  debug(data);
+
+
+  persist ( "c4wd", data );
+
+}
+
+</script>
+
+
+
+
+</script>
+
+
+
+
+
+<!-- function debug (val) {
+  document.getElementById("debug-console").innerHTML = '<div style="padding: 1em; background-color: yellow; border: 3px dotted black"><code>' + val + '</code></div>';
+  console.log(val);
+} -->
