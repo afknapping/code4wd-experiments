@@ -6,6 +6,7 @@ NOTES:
 
 - [ ] edit hotkey and links
 - [ ] ga
+- [x] system font
 - [x] {{ "The _config.yml file" | slugify }} to generate ids
 - [ ] localstorage 
 - [x] try out [Reimagining Single-Page Applications With Progressive Enhancement – Smashing Magazine](https://www.smashingmagazine.com/2015/12/reimagining-single-page-applications-progressive-enhancement/)
