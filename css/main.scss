@@ -4,36 +4,11 @@
 @charset "utf-8";
 
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-// @import
-        // "base",
-        // "layout",
-        // "syntax-highlighting"
-// ;
 
 
 
-.icon, .menu-icon {
-  display: inline-block;
-  width: 1em;
-  margin-right: 0.4em;
-}
-
-
-
-[class^='c4wd'] {
-
-  border: 1px dotted black;
-  padding: .2em;
-  background-color: #ddd;
-
-}
-
-.c4wd-talks-entry {
-  display: block;
-}
-
-
-:target {
-  background-color: yellow;
-}
+///////////////////////////////////////
+//                                   //
+//   see <style> tag in index.html   //
+//                                   //
+///////////////////////////////////////

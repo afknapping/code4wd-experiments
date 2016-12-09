@@ -16,14 +16,16 @@
 
       <ul>
         {% for page in site.pages %}
-          {% comment %}
           {% if page.url != '/manifest.appcache' %}
-          {% endif %}
-          {% endcomment %}
+          {% if page.url != '/css/main.css' %}
+          {% if page.url != '/feed.xml' %}
 
-            <a class="c4wd-xx" href="{{ page.url | prepend: site.baseurl }}"> {{ page.url }} {% if page.title %} ({{ page.title }}) {% endif %}
+            <a class="c4wd-xx" href="{{ page.url | prepend: site.baseurl }}"> {% if page.title %} {{ page.title }} {% endif %} ({{ page.url }})
             </a>
 
+          {% endif %}
+          {% endif %}
+          {% endif %}
 
 
         {% endfor %}
@@ -44,3 +46,25 @@
   </div>
 
 </header>
+
+<style type="text/css">
+.icon, .menu-icon {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.4em;
+}
+
+
+
+[class^='c4wd'] {
+
+  border: 1px dotted black;
+  padding: .2em;
+  background-color: #ddd;
+
+}
+
+.c4wd-talks-entry {
+  display: block;
+}
+</style>
