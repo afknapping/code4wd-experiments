@@ -9,28 +9,19 @@
   <h2>{{ talk.title }}</h2>
 
   <ul>
+        <img src="{{ talk.title | slugify  | append:'.webp' }}">
     <li>
-      <a href="{{ '/speakers#' | append: talk.speaker_id | prepend: site.baseurl }}" class="c4wd-xxxx">by {{ talk.speaker }}</a>
+      by {{ talk.speaker }}
     </li>
-    <li>image</li>
-    <li>abstract</li>
+    <li>{{ talk }}</li>
     <li>slides</li>
     <li>video</li>
   </ul>
 
-  <a href="{{ '/schedule#' | append: talk.talk_id | prepend: site.baseurl }}" class="c4wd-xxxx">locate this talk on the schedule...</a>
+<p>(inlined speaker details)</p>
 
 </div> <!-- c4wd-talks-entry -->
 
 
 
-{% endfor %}
-
-{% for page in site.pages %}
-
-{% if page.url != '/manifest.appcache' %}
-
-{{ page.url }}
-
-{% endif %}
 {% endfor %}

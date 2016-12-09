@@ -1,5 +1,13 @@
 <header class="site-header">
 
+<div class="c4wd-hero">hero image
+
+      <div class="c4wd-xxxx">tickets</div>
+
+    </div>
+
+
+
   <div class="wrapper">
 
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
@@ -22,10 +30,20 @@
 
 <style type="text/css">
 
+[class^='c4wd'] {
+
+  border: 1px dotted black;
+  padding: .2em;
+  background-color: #ddd;
+
+}
+
+
 .c4wd-nav {
-  background-color: black;
-  color: white;
+  /*background-color: black;
+  color: white;*/
   font-weight: 900;
+  box-shadow: 0px -5px 18px 0px rgba(50, 50, 50, 0.64);
 
   position: fixed;
   bottom: 0;
@@ -45,14 +63,6 @@
 }
 
 
-
-[class^='c4wd'] {
-
-  border: 1px dotted black;
-  padding: .2em;
-  background-color: #ddd;
-
-}
 
 .c4wd-talks-entry {
   display: block;

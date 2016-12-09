@@ -1,2 +1,26 @@
+<div class="c4wd-xxxx" id="speaker-name">
 
-speakers partial
+{% for speaker in site.speakers %}
+
+<div id="{{ speaker.name | slugify }}" class="c4wd-speakers-entry">
+
+
+  <h2>{{ speaker.name }}</h2>
+
+  <ul>
+    <img src="{{ speaker.name | slugify  | append:'.webp' }}">
+    <li>{{ speaker }}</li>
+    <li><a href="https://github.com/{{ speaker.github }}">@{{ speaker.github }}</a></li>
+  </ul>
+
+  <p>(inlined talk details)</p>
+
+</div> <!-- c4wd-speakers-entry -->
+
+
+
+{% endfor %}
+
+
+</div>
+
