@@ -7,6 +7,7 @@ CACHE MANIFEST
 # rev {{ site.time }}
 
 
+
 CACHE:
 
 {% comment %} {% asset_path all.css %} {% endcomment %}

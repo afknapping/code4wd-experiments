@@ -12,12 +12,10 @@
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
     <nav role="navigation" class="c4wd-nav">
-        <ul>
           {% for section in page.sections %}
             <!-- change span to li -->
             <span><a href="#{{ section | slugify }}" class="c4wd-nav-item">{{ section }}</a></span>
           {% endfor %}
-        </ul>
     </nav>
 
 
@@ -47,12 +45,17 @@
   position: fixed;
   z-index: 1000;
   bottom: 0;
-  width: 90vw;
+  max-width: 400px;
 }
 
 .c4wd-nav-item {
   display: inline-block;
   float: left;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 10px;
+  text-align: center;
 }
 
 
