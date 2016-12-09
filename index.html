@@ -21,9 +21,6 @@ sections:
 
 <style type="text/css">
 
-
-
-
 /*
 see [Reimagining Single-Page Applications With Progressive Enhancement – Smashing Magazine](https://www.smashingmagazine.com/2015/12/reimagining-single-page-applications-progressive-enhancement/)
 */
@@ -94,6 +91,7 @@ body {
 GitHubb: <a href="https://github.com/filtercake/code4wd-experiments">filtercake/code4wd-experiments</a>
 
 
+
 <!-- **************************** -->
 <!-- ********* DEFAULTS ********* -->
 <!-- **************************** -->
@@ -111,9 +109,11 @@ function debug (val) {
 
 
 
+
 <script type="text/javascript">
 window.addEventListener('hashchange', function() {
     debug(location.hash.substr(1));
+    document.getElementById("nav-trigger").checked = false;
 });
 
 

@@ -13,7 +13,7 @@ NOTES:
 - [x] try out [Reimagining Single-Page Applications With Progressive Enhancement – Smashing Magazine](https://www.smashingmagazine.com/2015/12/reimagining-single-page-applications-progressive-enhancement/)
 - [ ] subtle text/box anmation, no right angles: http://filtercake4.surge.sh/, scss: https://github.com/filtercake/filtercake4/blob/gh-pages/src/assets/sass/main.scss#L38
 - ~~[Alex Normand - How to enhance a static site with pjax and the responseType XHR2 attribute](http://www.alexnormand.com/blog/2014/07/progressively-enhancing-a-static-site-with-pjax-and-responseType-XHR-attribute/)~~
-- [ ] off canvas menu in css if needed
+- [x] off canvas menu in css if needed
 - [ ] [Scroll-Then-Fix Content | CSS-Tricks](https://css-tricks.com/scroll-fix-content/): bottom bar comes in as CTA scrolls out of view. maybe sticky, bottom: -$height transforms to bottom: 0
     + [Getting Started • Waypoints](http://imakewebthings.com/waypoints/guides/getting-started/)
 - [x] genrate appcache 
