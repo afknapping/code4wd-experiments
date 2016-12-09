@@ -4,6 +4,7 @@ live: http://www.filtercake.com/code4wd-experiments/
 
 NOTES:
 
+
 - [ ] edit hotkey and links
 - [ ] ga
 - [x] system font
@@ -23,3 +24,26 @@ NOTES:
 - [x] snippet: 
     - hammer-time.js, appcache update, ui-lang, localstorage, 
     
+
+---
+
+### Mobile Bottom Nav
+
+Menu
+Speakers
+Talks
+Notes
+Ticket
+
+
+#### Menu content
+
+(generated)
+
+Home 
+Sponsors
+Speakers
+Agenda 
+Venue 
+Notes
+Talks
