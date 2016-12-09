@@ -6,6 +6,7 @@ sections:
 - Home
 - Sponsors
 - Speakers
+- talks
 - Agenda
 - Our Venue
 
@@ -16,8 +17,6 @@ sections:
 <html>
 
   {% include head.html %}
-
-  {{ page.sections }}
 
 <style type="text/css">
 
@@ -74,6 +73,7 @@ main > *:target ~ * {
     {% for section in page.sections %}
     <div id="{{ section | slugify }}" class="c4wd-view">
         <h1>{{ section }}</h1>
+        {% include {{ section | slugify | append: '.html' }} %}
     </div>
 
     {% endfor %}

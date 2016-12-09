@@ -4,7 +4,7 @@ live: http://www.filtercake.com/code4wd-experiments/
 
 NOTES:
 
-- [ ] {{ "The _config.yml file" | slugify }} to generate ids
+- [x] {{ "The _config.yml file" | slugify }} to generate ids
 - [ ] localstorage 
 - [x] try out [Reimagining Single-Page Applications With Progressive Enhancement – Smashing Magazine](https://www.smashingmagazine.com/2015/12/reimagining-single-page-applications-progressive-enhancement/)
 - [ ] subtle text/box anmation, no right angles: http://filtercake4.surge.sh/, scss: https://github.com/filtercake/filtercake4/blob/gh-pages/src/assets/sass/main.scss#L38
