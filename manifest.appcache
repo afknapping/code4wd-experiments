@@ -12,11 +12,19 @@ CACHE:
 
 {% comment %} {% asset_path all.css %} {% endcomment %}
 
-{% for page in site.pages %}{% if page.url != '/manifest.appcache' %}{{ page.url }}{% endif %}
+{% for page in site.pages %}
+{% if page.url != '/manifest.appcache' %}
+{{ page.url | prepend: site.baseurl}}
+{% endif %}
+
 {% endfor %}
-{% for item in site.images %}{{ item.url }}
+
+{% for item in site.images %}
+{{ item.url | prepend: site.baseurl }}
 {% endfor %}
-{% for item in site.scripts %}{{ item.url }}
+
+{% for item in site.scripts %}
+{{ item.url | prepend: site.baseurl }}
 {% endfor %}
 
 NETWORK:
