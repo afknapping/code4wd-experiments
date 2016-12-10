@@ -68,10 +68,14 @@ label[for="nav-trigger"] {
   padding: 1em;
   border: 2px solid black;
   line-height: 40px;
+  transition: bottom .2s ease-out, opacity .2s ease-out;
+  opacity: 0;
+  z-index: -20;
 
 }
 .nav-trigger:checked ~ #burger-menu {
   bottom: 80px;
+  opacity: .9;
 }
 
 
