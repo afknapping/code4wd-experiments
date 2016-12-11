@@ -83,20 +83,17 @@ Cupcake ipsum dolor. Sit amet I love bonbon* bear claw tootsie roll jelly.* I lo
 
   .c4wd-markdown > *, .c4wd-markdown > * > img {
     max-width: 32em;
-    animation-duration: 50s;
-    animation-name: wobbling;
-    animation-iteration-count: infinite;
 
     background-color: #111;
     color: #FFDC00;
     padding: 1em 2em;
     animation-duration: 50s;
-    animation-name: wobbling;
+    animation-name: wobbling1;
     animation-iteration-count: infinite;
 }
 
 
-.c4wd-markdown > *::after, .c4wd-markdown > * > img::after {
+.c4wd-markdown > *::after {
   content: " ";
   border: 3px solid #FFDC00;
   width: 100%;
@@ -104,16 +101,35 @@ Cupcake ipsum dolor. Sit amet I love bonbon* bear claw tootsie roll jelly.* I lo
   position: absolute;
   left: 0;
   top: 0;
+
   animation-duration: 50s;
-  animation-name: wobbling;
+  animation-name: wobbling4;
   animation-iteration-count: infinite;
 }
 
+
+/* no image::after, so... */
+.c4wd-markdown > * > img {
+  padding: 1em 1em;
+  /*display: inline-block;*/
+  border: 3px solid #FFDC00;
+}
 
 
 </style>
 
 <script type="text/javascript">
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+// Returns a random integer between min (included) and max (excluded)
+// Using Math.round() will give you a non-uniform distribution!
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+
 
   var markdownP = document.querySelectorAll('.c4wd-markdown > *');
   console.log(markdownP);
@@ -121,8 +137,8 @@ Cupcake ipsum dolor. Sit amet I love bonbon* bear claw tootsie roll jelly.* I lo
   markdownP.forEach(function(element, index) {
     console.log(element);
     console.log(index);
-    element.style.animationName = "wobbling"+index;
-    console.log("wobbling"+index);
+    element.style.animationName = "wobbling"+getRandomInt(0, {{ numberOfWobbles }});
+    console.log("wobbling"+getRandomInt(0, {{ numberOfWobbles }}));
   });
 
 // a
