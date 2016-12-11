@@ -5,10 +5,19 @@ live: http://www.filtercake.com/code4wd-experiments/
 NOTES:
 
 
+- [ ] cfp
+- [ ] Analog style:
+  + Watercolor Effects: http://www.noupe.com/design/world-of-watercolor-beautiful-watercolor-effects-in-web-design-and-tutorials.html
+  + Ink Transition Effect: https://codyhouse.co/demo/ink-transition-effect/index.html
+  + Glitch Effect on Text / Images / SVG:
+https://css-tricks.com/glitch-effect-text-images-svg/
+- [ ] ink to svg test, compare weight to pixel image
 - [ ] edit hotkey and links
 - [ ] ga
+- [x] mini pattern lab
+    - [ ] ish
 - [x] system font
-- [x] {{ "The _config.yml file" | slugify }} to generate ids
+- [x] {{ "foo bar" | slugify }} to generate ids
 - [x] localstorage notes
 - [x] try out [Reimagining Single-Page Applications With Progressive Enhancement – Smashing Magazine](https://www.smashingmagazine.com/2015/12/reimagining-single-page-applications-progressive-enhancement/)
 - [ ] subtle text/box anmation, no right angles: http://filtercake4.surge.sh/, scss: https://github.com/filtercake/filtercake4/blob/gh-pages/src/assets/sass/main.scss#L38
