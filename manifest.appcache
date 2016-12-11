@@ -6,8 +6,6 @@ CACHE MANIFEST
 
 # rev {{ site.time }}
 
-{% if jekyll.environment == "production" %}
-
 CACHE:
 
 {% comment %} {% asset_path all.css %} {% endcomment %}
@@ -31,6 +29,3 @@ NETWORK:
 *
 http://*
 https://*
-
-
-{% endif %}

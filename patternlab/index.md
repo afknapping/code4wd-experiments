@@ -5,6 +5,7 @@ title: pattern lab
 
 # CODE4WD {{ page.title }}
 
+[to index]({{ site.baseurl }}/)
 
 ## Atoms
 
