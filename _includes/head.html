@@ -71,6 +71,52 @@ applicationCache.addEventListener('updateready', function() {
 </script>
 
 
+<style type="text/css">
+
+/*
+see [Reimagining Single-Page Applications With Progressive Enhancement – Smashing Magazine](https://www.smashingmagazine.com/2015/12/reimagining-single-page-applications-progressive-enhancement/)
+*/
+
+main > * {
+    display: none;
+}
+
+
+nav, main > *:last-child {
+    display: block;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1) }
+    50% { transform: scale(1.03) }
+    100% { transform: scale(1) }
+}
+
+main > *:target {
+    display: block;
+    animation: pulse 0.2s ease-out 1;
+}
+
+main > *:target ~ * {
+    display: none;
+}
+
+
+/*
+// Using System UI Fonts In Web Design: A Quick Practical Guide – Smashing Magazine
+// http://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+// last checked: dec 2015
+*/
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  max-width: 400px;
+  padding-bottom: 70px;
+  }
+
+
+
+</style>
 
 
 </head>
