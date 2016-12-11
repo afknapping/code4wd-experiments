@@ -99,6 +99,7 @@ Cupcake ipsum dolor. Sit amet I love bonbon* bear claw tootsie roll jelly.* I lo
 <style type="text/css">
   .c4wd-ptl-colorswatch {
     display: inline-block;
+    width: 13em;
   }
   .c4wd-ptl-colorswatch-color-field {
     width: 8em;
