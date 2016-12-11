@@ -6,7 +6,7 @@ CACHE MANIFEST
 
 # rev {{ site.time }}
 
-
+{% if jekyll.environment == "production" %}
 
 CACHE:
 
@@ -31,3 +31,6 @@ NETWORK:
 *
 http://*
 https://*
+
+
+{% endif %}
