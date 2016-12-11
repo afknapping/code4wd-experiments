@@ -12,7 +12,10 @@ title: pattern lab
 
 Markdown elements do not come with classes, so they need to be styled by an enclosing element, eg `.c4wd-defaults p` or `.c4wd-defaults h3`
 
+
+
 <div class="c4wd-defaults" markdown="1">
+
 <!-- markdown="1"? http://stackoverflow.com/a/23384161 -->
 
 # H1 Headline
@@ -76,12 +79,38 @@ Cupcake ipsum dolor. Sit amet I love bonbon* bear claw tootsie roll jelly.* I lo
 
 <h4>{{ pattern.url | remove:'/patterns/' | remove:'/' }}</h4>
 
-
 {% if pattern.colors %}
-colors via clrs.cc<br><br>
+<p><b>colors via clrs.cc:</b></p>
+
 {% for color in pattern.colors %}
-{{ color[0] }}: {{ color[1] }} <br>
+
+
+<div class="c4wd-ptl-colorswatch" >
+  <div class="c4wd-ptl-colorswatch-color-field" style="background-color: {{ color[1] }};">
+  </div>
+  <div class="c4wd-ptl-colorswatch-label">
+    <span>{{ color[0] }}</span><br>
+    <span>{{ color[1] }}</span>
+  </div>
+</div>
+
 {% endfor %}
+
+<style type="text/css">
+  .c4wd-ptl-colorswatch {
+    display: inline-block;
+  }
+  .c4wd-ptl-colorswatch-color-field {
+    width: 8em;
+  }
+  .c4wd-ptl-colorswatch-color-field, .c4wd-ptl-colorswatch-label {
+    font-size: 0.62em;
+    height: 5em;
+    display: inline-block;
+  }
+</style>
+
+
 {% endif %}
 
 
