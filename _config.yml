@@ -15,6 +15,8 @@ url: "http://code4wd.com" # the base hostname & protocol for your site
 twitter_username: fogelmania
 github_username:  fogelmania
 
+asset_path: "/bucket"
+
 collections:
 - talks
 - speakers

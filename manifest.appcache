@@ -8,9 +8,7 @@ CACHE MANIFEST
 
 CACHE:
 
-/code4wd-experiments/bucket/
-
-{% comment %} {% asset_path all.css %} {% endcomment %}
+{{ site.asset_path | prepend: site.baseurl }}/
 
 {% for page in site.pages %}
 {% if page.url != '/manifest.appcache' %}
