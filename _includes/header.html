@@ -1,4 +1,4 @@
-<header class="site-header">
+<header class="site-header debug">
 
 <div class="c4wd-hero">hero image
 
@@ -7,11 +7,11 @@
     </div>
 
 
-  <div class="wrapper">
+  <div class="wrapper debug">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <a class="site-title debug" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
-    <nav role="navigation" class="c4wd-nav">
+    <nav role="navigation" class="c4wd-nav debug">
 
           <input type="checkbox" id="nav-trigger" class="nav-trigger" />
           <label for="nav-trigger" class="c4wd-nav-item">X</label>
@@ -48,97 +48,3 @@
   </div>
 
 </header>
-
-<style type="text/css">
-
-* {
-  box-sizing: border-box;
-}
-
-#nav-trigger {
-  /* critical styles - hide the checkbox input */
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-}
-
-
-label[for="nav-trigger"] {
-  /* critical positioning styles */
-  /*position: absolute;*/
-  /*left: 15px; top: 15px;*/
-  z-index: 2;
-
-  /* non-critical apperance styles */
-  cursor: pointer;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
-  background-size: contain;
-}
-
-
-#burger-menu {
-  position: absolute;
-  bottom: -330px;
-  background-color: white;
-  padding: 1em;
-  border: 2px solid black;
-  line-height: 40px;
-  transition: bottom .2s ease-out, opacity .2s ease-out;
-  opacity: 0;
-  z-index: -20;
-
-}
-.nav-trigger:checked ~ #burger-menu {
-  bottom: 80px;
-  opacity: .9;
-}
-
-
-[class^='c4wd'] {
-
-  /*border: 1px dotted black;*/
-  /*padding: .5em;*/
-
-  background-color: black;
-  border: 2px solid yellow;
-  color: yellow;
-
-}
-
-
-.c4wd-nav {
-  /*background-color: black;
-  color: white;*/
-  font-weight: 900;
-  box-shadow: 0px -5px 18px 0px rgba(50, 50, 50, 0.64);
-
-  position: fixed;
-  z-index: 1000;
-  bottom: 0;
-  max-width: 400px;
-  width: 93%;
-}
-
-
-.c4wd-nav-item {
-  display: inline-block;
-  /*float: left;*/
-  width: 16%;
-  height: 48px;
-  line-height: 48px;
-  font-size: 10px;
-  text-align: center;
-}
-
-
-.icon, .menu-icon {
-  display: inline-block;
-  width: 1em;
-  margin-right: 0.4em;
-}
-
-
-
-.c4wd-talks-entry {
-  display: block;
-}
-</style>

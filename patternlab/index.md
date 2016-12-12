@@ -19,7 +19,7 @@ title: pattern lab
 **************************************************** -->
 
 
-<div class="c4wd-patternlab-entry">
+<div class="c4wd-patternlab-entry debug">
 
 <h4>{{ pattern.url | remove:'/patterns/' | remove:'/' }}</h4>
 
@@ -27,7 +27,6 @@ title: pattern lab
 <p><b>colors via clrs.cc:</b></p>
 
 {% for color in pattern.colors %}
-
 
 <div class="c4wd-ptl-colorswatch" >
   <div class="c4wd-ptl-colorswatch-color-field" style="background-color: {{ color[1] }};">
@@ -39,21 +38,6 @@ title: pattern lab
 </div>
 
 {% endfor %}
-
-<style type="text/css">
-  .c4wd-ptl-colorswatch {
-    display: inline-block;
-    width: 13em;
-  }
-  .c4wd-ptl-colorswatch-color-field {
-    width: 8em;
-  }
-  .c4wd-ptl-colorswatch-color-field, .c4wd-ptl-colorswatch-label {
-    font-size: 0.62em;
-    height: 5em;
-    display: inline-block;
-  }
-</style>
 
 
 {% endif %}
@@ -78,27 +62,3 @@ title: pattern lab
 
 
 {% endfor %}
-
-
-
-<style type="text/css">
-
-.c4wd-button {
-  background-color: yellow;
-}
-
-.c4wd-button:hover, .c4wd-button:active, .c4wd-button:active {
-
-}
-
-
-.c4wd-button__text {
-
-}
-
-.c4wd-button__icon {
-
-}
-
-
-</style>

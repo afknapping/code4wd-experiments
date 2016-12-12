@@ -24,11 +24,11 @@ sections:
 <!-- see [Reimagining Single-Page Applications With Progressive Enhancement – Smashing Magazine](https://www.smashingmagazine.com/2015/12/reimagining-single-page-applications-progressive-enhancement/) -->
 
 
-<main class="c4wd-main" role="main">
+<main class="c4wd-main debug" role="main">
 
 
     {% for section in page.sections %}
-    <div id="{{ section | slugify }}" class="c4wd-view">
+    <div id="{{ section | slugify }}" class="c4wd-view debug">
         <h1>{{ section }}</h1>
         {% include {{ section | slugify | append: '.html' }} %}
     </div>
@@ -41,36 +41,18 @@ sections:
 
 <hr>
 
+<p class="debug">
 GitHub: <a href="https://github.com/filtercake/code4wd-experiments">filtercake/code4wd-experiments</a>
-
+</p>
 
 
 <!-- **************************** -->
 <!-- ********* DEFAULTS ********* -->
 <!-- **************************** -->
 
-<div id="debug-console" style="position: fixed; right: 1em; bottom: 5em;"></div>
-<script type="text/javascript" defer>
-function debug (val) {
-  document.getElementById("debug-console").innerHTML = '<div style="padding: 1em; background-color: yellow; border: 3px dotted black"><code>' + val + '</code></div>';
-  console.log(val);
-}
-</script>
-
-<!-- **************************** -->
+<div id="debug-console" style="color: black; position: fixed; right: 1em; bottom: 5em;"></div>
 
 
-
-
-
-<script type="text/javascript">
-window.addEventListener('hashchange', function() {
-    debug(location.hash.substr(1));
-    document.getElementById("nav-trigger").checked = false;
-});
-
-
-</script>
 
 
   </body>
