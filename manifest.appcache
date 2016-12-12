@@ -8,6 +8,8 @@ CACHE MANIFEST
 
 CACHE:
 
+/code4wd-experiments/bucket/
+
 {% comment %} {% asset_path all.css %} {% endcomment %}
 
 {% for page in site.pages %}
