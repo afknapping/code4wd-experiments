@@ -2,6 +2,11 @@
 layout: default
 title: home
 
+
+# to add a section, you also need to add a partial with the slugified title as filename. eg section "My Cool Section" will call includes/my-cool-section.html
+# see block starting with "{% for section in page.sections %}"
+# without the partial jekyll will throw a build error
+
 sections:
 - Home
 - Sponsors
