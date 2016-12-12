@@ -23,7 +23,7 @@
 }
 
 .c4wd-body {
-  min-height: 120vh;
+  min-height: 95vh;
   background-image: url(/code4wd-experiments/bucket/testbg.svg);
   background-color: black;
   background-size: cover;
@@ -35,23 +35,37 @@ see [Reimagining Single-Page Applications With Progressive Enhancement – Smash
 */
 
 main > * {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .4s;
+    max-height: 60vh;
+    overflow: hidden;
+
 }
 
 
 nav, main > *:last-child {
-    display: block;
+    // display: block;
 }
 
 @keyframes pulse {
-    0% { transform: scale(1) }
-    50% { transform: scale(1.03) }
-    100% { transform: scale(1) }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+.c4wd-main {
+  position: relative;
 }
 
 main > *:target {
     display: block;
-    animation: pulse 0.2s ease-out 1;
+    // animation: pulse 0.2s ease-out 1;
+    opacity: 1;
+    max-height: none;
 }
 
 main > *:target ~ * {
@@ -169,3 +183,14 @@ label[for="nav-trigger"] {
     height: 5em;
     display: inline-block;
   }
+
+
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+  width: 100%;
+  height: 100%;
+  background-color:pink;
+}
