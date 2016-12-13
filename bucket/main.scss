@@ -46,6 +46,7 @@ $xlarge: 2.62em;
 }
 
 .c4wd-speaker-figure {
+  z-index: 1;
   margin: 0;
   clear: both;
   width: 40%;
@@ -65,10 +66,12 @@ $xlarge: 2.62em;
 }
 
 .c4wd-speaker-links {
+  @include cartonize;
+  font-size: $small;
   width: 40%;
   float: left;
-  font-size: $small;
-  @include cartonize;
+  padding-left: 2em;
+  margin-left: 1em;
 }
 
 
