@@ -1,5 +1,3 @@
----
-
 <div class="c4wd-xxxx" id="speaker-name">
 
 {% for speaker in site.speakers %}
@@ -12,7 +10,7 @@
 
 <figure class="c4wd-speaker-figure">
   <div class="c4wd-speaker-image-wrapper">
-    <img src="{{ speaker.name | slugify | prepend: '/bucket/' | prepend: site.baseurl | append: '.webp' }} ">
+    <img src="{{ speaker.name | slugify | prepend: '/bucket/' | prepend: site.baseurl | append: '.jpg' }} ">
   </div>
   <figcaption>{{ speaker.name }}</figcaption>
 </figure>
