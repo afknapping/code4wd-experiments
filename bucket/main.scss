@@ -7,6 +7,78 @@
 @import "../_patterns/markdown.scss";
 
 
+// transform: translate(#{random(20) / 100}em, #{random(50) / -100}em) skew(#{random(15) / 10}deg, #{random(15) / -10}deg);
+
+// translate(#{random(20) / 100}em, #{random(50) / -100}em) skew(#{random(15) / 10}deg, #{random(15) / -10}deg);
+
+
+// $foreground: #FFDC00;
+// $background: #111;
+
+$foreground: hsl(153, 43%, 42%);
+$background: white;
+
+$small: .62em;
+$copy: 1em;
+$large: 1.62em;
+$xlarge: 2.62em;
+
+
+@mixin cartonize {
+
+    background-color: $background;
+    color: $foreground;
+    padding: 0.5em 1em;
+    transform-origin: center;
+    transform: translate(#{random(50) / 100}em, #{random(50) / -100}em) skew(#{random(15) / 10}deg, #{random(15) / -10}deg);
+
+  &::after {
+    content: " ";
+    border: 3px solid $foreground;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: center;
+    transform: translate(#{random(50) / -100}em, #{random(50) / 100}em) skew(#{random(15) / -10}deg, #{random(15) / 10}deg) scale(0.95);
+  }
+}
+
+.c4wd-speaker-figure {
+  margin: 0;
+  clear: both;
+  width: 40%;
+  float: left;
+  .c4wd-speaker-image-wrapper {
+    @include cartonize;
+  }
+  img {
+    width: 100%;
+  }
+  figcaption {
+    @include cartonize;
+    position: relative;
+    top: -0.6em;
+    left: 1em;
+  }
+}
+
+.c4wd-speaker-links {
+  width: 40%;
+  float: left;
+  font-size: $small;
+  @include cartonize;
+}
+
+
+.c4wd-speaker-bio {
+  clear: both;
+  @include cartonize;
+}
+
+
+
 /* BASE VARS, ARGH */
 /* need to douplicate stuff from jekyll config :( */
 

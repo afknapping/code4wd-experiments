@@ -1,3 +1,5 @@
+---
+
 <div class="c4wd-xxxx" id="speaker-name">
 
 {% for speaker in site.speakers %}
@@ -5,13 +7,24 @@
 <div id="{{ speaker.name | slugify }}" class="c4wd-speakers-entry">
 
 
-  <h2>{{ speaker.name }}</h2>
 
-  <ul>
-    <!-- <img src="{{ speaker.name | slugify  | append:'.webp' }}"> -->
-    <li>{{ speaker }}</li>
-    <li><a href="https://github.com/{{ speaker.github }}">@{{ speaker.github }}</a></li>
-  </ul>
+
+
+<figure class="c4wd-speaker-figure">
+  <div class="c4wd-speaker-image-wrapper">
+    <img src="{{ speaker.name | slugify | prepend: '/bucket/' | prepend: site.baseurl | append: '.webp' }} ">
+  </div>
+  <figcaption>{{ speaker.name }}</figcaption>
+</figure>
+
+<div class="c4wd-speaker-links">
+  <p><a href="https://github.com/{{ speaker.github }}">github/{{ speaker.github }}</a></p>
+  <p><a href="https://twitter.com/{{ speaker.twitter }}">twitter/{{ speaker.github }}</a></p>
+</div>
+
+<div class="c4wd-speaker-bio">
+  {{ speaker }}
+</div>
 
   <p>(inlined talk details)</p>
 
