@@ -1,10 +1,18 @@
 live: http://www.filtercake.com/code4wd-experiments/
 
+## setup
+
+- clone
+- `bundle` to install
+- `bundle exec jekyll serve` to start
+- open `http://127.0.0.1:4000/code4wd-experiments/` in a browser
+
+jekyll serve
 
 
-NOTES:
+#### NOTES:
 
-
+- [ ] index grid speakers + detail, index grid talks + details
 - [ ] cfp
 - [ ] Analog style:
   + Watercolor Effects: http://www.noupe.com/design/world-of-watercolor-beautiful-watercolor-effects-in-web-design-and-tutorials.html
