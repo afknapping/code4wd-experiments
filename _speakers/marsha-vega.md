@@ -6,7 +6,7 @@ linkedin: itsmarsha
 flickr: itsmarsha
 instagram: itsmarsha
 talk:
-    title: Responsive Web Considered Harmful
+    title: A Talk About Nothing
 past-talks:
 
 

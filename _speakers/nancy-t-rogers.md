@@ -6,7 +6,7 @@ linkedin: nancytrodgers
 flickr: nancytrodgers
 instagram: nancytrodgers
 talk:
-    title: How JavaScript is Going to Replace Node.js
+    title: A Talk About Nothing
 past-talks:
 
 

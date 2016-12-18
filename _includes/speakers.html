@@ -45,7 +45,13 @@
     {{ speaker }}
   </div>
 
-  <p class="debug">(talk link)</p>
+
+  {% for talk in site.talks %}
+    {% if talk.speaker == speaker.name %}
+      <p class="debug">Their talk: <a href="{{ talk.title | slugify | prepend: '#' }}">{{ talk.title }}</a></p>
+    {% endif %}
+  {% endfor %}
+
 
 <p>
   <a href="#speakers" class="debug">all speakers</a> <a href="#talks" class="debug">all talks</a>
