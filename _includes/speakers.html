@@ -25,7 +25,7 @@
 <div id="{{ speaker.name | slugify }}" class="c4wd-speakers-entry c4wd-view”">
 
 <p>
-  <button onclick="window.history.back();">back</button>
+  <button onclick="window.history.back();" class="debug">back</button>
 </p>
 
 
@@ -45,7 +45,12 @@
     {{ speaker }}
   </div>
 
-    <p>(inlined talk details)</p>
+  <p class="debug">(talk link)</p>
+
+<p>
+  <a href="#speakers" class="debug">all speakers</a> <a href="#talks" class="debug">all talks</a>
+</p>
+
 
 </div> <!-- c4wd-speakers-entry -->
 
