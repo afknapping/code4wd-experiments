@@ -48,7 +48,8 @@ See `_includes/speakers.html` for variables in use.
 #### NOTES:
 
 - [ ] index grid speakers + detail, index grid talks + details
-- [ ] cfp
+- [x] cfp
+- [ ] maybe sth like [bLazy.js – A lazyload image script | dinbror](http://dinbror.dk/blog/blazy/) to make initial rendering faster
 - [ ] Analog style:
   + Watercolor Effects: http://www.noupe.com/design/world-of-watercolor-beautiful-watercolor-effects-in-web-design-and-tutorials.html
   + Ink Transition Effect: https://codyhouse.co/demo/ink-transition-effect/index.html
