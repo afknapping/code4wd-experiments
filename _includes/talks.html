@@ -1,17 +1,18 @@
 
-<div id="talks" class="c4wd-talks c4wd-view debug">
-talks partial
+<div id="talks" class="c4wd-talks-index c4wd-view debug">
 
 {% for talk in site.talks %}
-  {{ talks.title }}
+
+  <div class="debug">
+    <a href="{{ talk.title | slugify | prepend:'#' }}">{{ talk.title }}</a>
+  </div>
 {% endfor %}
 </div>
 
 
-
 {% for talk in site.talks %}
 
-<div id="{{ talk.talk_id }}" class="c4wd-talks-entry">
+<div id="{{ talk.title | slugify }}" class="c4wd-talks-entry debug c4wd-view">
 
 
   <h2>{{ talk.title }}</h2>
@@ -19,16 +20,19 @@ talks partial
   <ul>
         <!-- <img src="{{ talk.title | slugify  | append:'.webp' }}"> -->
     <li>
-      by {{ talk.speaker }}
+      by <a href="{{ talk.speaker | slugify | prepend:'#' }}">{{ talk.speaker }}</a>
     </li>
     <li>{{ talk }}</li>
     <li>slides</li>
     <li>video</li>
   </ul>
 
-<p>(inlined speaker details)</p>
+  <p>
+  <a href="#speakers" class="debug">all speakers</a> <a href="#talks" class="debug">all talks</a>
+</p>
 
-</div> <!-- c4wd-talks-entry -->
+
+</div> <!-- c4wd-talks-entry -->e
 
 
 
