@@ -18,7 +18,6 @@ sections:
 - coc
 
 
-
 ---
 
 
@@ -27,27 +26,24 @@ sections:
 <!-- see [Reimagining Single-Page Applications With Progressive Enhancement – Smashing Magazine](https://www.smashingmagazine.com/2015/12/reimagining-single-page-applications-progressive-enhancement/) -->
 
 
-<main class="c4wd-main debug" role="main">
-
+<main class="c4wd-main" role="main">
 
     {% for section in page.sections %}
-    <div id="{{ section | slugify }}" class="c4wd-view debug">
-        <h1>{{ section }}</h1>
         {% include {{ section | slugify | append: '.html' }} %}
-    </div>
-
     {% endfor %}
-
 
 </main>
 
 
+
+
+<!--
 <hr>
 
 <p class="debug">
 GitHub: <a href="https://github.com/filtercake/code4wd-experiments">filtercake/code4wd-experiments</a>
 </p>
-
+ -->
 
 <!-- **************************** -->
 <!-- ********* DEFAULTS ********* -->

@@ -63,6 +63,14 @@ $xlarge: 2.62em;
     top: -0.6em;
     left: 1em;
   }
+
+
+  .c4wd-speakers-index & {
+    width: 25%;
+    clear: none;
+    margin: 0 1em 1em 0;
+    // display: flex;
+  }
 }
 
 .c4wd-speaker-links {
@@ -94,6 +102,11 @@ $xlarge: 2.62em;
   background-color: hsla(210, 100%, 12%, 0.7);
   // border: 2px solid yellow;
   color: hsl(52, 100%, 50%);
+
+  a {
+    color: white;
+    font-weight: 900;
+  }
 
 }
 

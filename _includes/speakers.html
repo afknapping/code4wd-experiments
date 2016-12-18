@@ -1,37 +1,54 @@
-<div class="c4wd-xxxx" id="speaker-name">
 
+
+<!-- index -->
+<div id="speakers" class="c4wd-speakers-index c4wd-view debug">
+{% for speaker in site.speakers %}
+  <!-- <div style="float: left; display: inline-block;"></div> -->
+    <a href="{{ speaker.name | slugify | prepend:'#' }}">
+      <figure class="c4wd-speaker-figure">
+        <div class="c4wd-speaker-image-wrapper">
+          <img src="{{ speaker.name | slugify | prepend: '/bucket/' | prepend: site.baseurl | append: '.jpg' }} ">
+        </div>
+        <figcaption>{{ speaker.name }}</figcaption>
+      </figure>
+    </a>
+  <!-- </div> -->
+
+{% endfor %}
+</div>
+
+
+
+<!-- details -->
 {% for speaker in site.speakers %}
 
-<div id="{{ speaker.name | slugify }}" class="c4wd-speakers-entry">
+<div id="{{ speaker.name | slugify }}" class="c4wd-speakers-entry c4wd-view”">
+
+<p>
+  <button onclick="window.history.back();">back</button>
+</p>
 
 
+  <figure class="c4wd-speaker-figure">
+    <div class="c4wd-speaker-image-wrapper">
+      <img src="{{ speaker.name | slugify | prepend: '/bucket/' | prepend: site.baseurl | append: '.jpg' }} ">
+    </div>
+    <figcaption>{{ speaker.name }}</figcaption>
+  </figure>
 
-
-
-<figure class="c4wd-speaker-figure">
-  <div class="c4wd-speaker-image-wrapper">
-    <img src="{{ speaker.name | slugify | prepend: '/bucket/' | prepend: site.baseurl | append: '.jpg' }} ">
+  <div class="c4wd-speaker-links">
+    <p><a href="https://github.com/{{ speaker.github }}">github/{{ speaker.github }}</a></p>
+    <p><a href="https://twitter.com/{{ speaker.twitter }}">twitter/{{ speaker.github }}</a></p>
   </div>
-  <figcaption>{{ speaker.name }}</figcaption>
-</figure>
 
-<div class="c4wd-speaker-links">
-  <p><a href="https://github.com/{{ speaker.github }}">github/{{ speaker.github }}</a></p>
-  <p><a href="https://twitter.com/{{ speaker.twitter }}">twitter/{{ speaker.github }}</a></p>
-</div>
+  <div class="c4wd-speaker-bio">
+    {{ speaker }}
+  </div>
 
-<div class="c4wd-speaker-bio">
-  {{ speaker }}
-</div>
-
-  <p>(inlined talk details)</p>
+    <p>(inlined talk details)</p>
 
 </div> <!-- c4wd-speakers-entry -->
 
 
 
 {% endfor %}
-
-
-</div>
-
