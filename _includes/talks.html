@@ -1,9 +1,9 @@
 
-<div id="talks" class="c4wd-talks-index c4wd-view debug">
+<div id="talks" class="c4wd-talks-index c4wd-view ">
 
 {% for talk in site.talks %}
 
-  <div class="debug">
+  <div class="">
     <a href="{{ talk.title | slugify | prepend:'#' }}">{{ talk.title }}</a>
   </div>
 {% endfor %}
@@ -12,26 +12,18 @@
 
 {% for talk in site.talks %}
 
-<div id="{{ talk.title | slugify }}" class="c4wd-talks-entry debug c4wd-view">
-
-
-  <h2>{{ talk.title }}</h2>
-
-  <ul>
-        <!-- <img src="{{ talk.title | slugify  | append:'.webp' }}"> -->
-    <li>
-      by <a href="{{ talk.speaker | slugify | prepend:'#' }}">{{ talk.speaker }}</a>
-    </li>
-    <li>{{ talk }}</li>
-    <li>slides</li>
-    <li>video</li>
-  </ul>
-
+<div id="{{ talk.title | slugify }}" class="c4wd-talks-entry c4wd-markdown c4wd-view">
+  <figure class="c4wd-talk-figure">
+    <div class="c4wd-talk-image-wrapper">
+      <img src="{{ talk.title | slugify | prepend: '/bucket/' | prepend: site.baseurl | append: '.jpg' }} ">
+    </div>
+    <figcaption><h2>{{ talk.title }}</h2></figcaption>
+  </figure>
+  <p>by <a href="{{ talk.speaker | slugify | prepend:'#' }}">{{ talk.speaker }}</a></p>
+  {{ talk }}
   <p>
-  <a href="#speakers" class="debug">all speakers</a> <a href="#talks" class="debug">all talks</a>
-</p>
-
-
+    <a href="#speakers" class="">all speakers</a> <a href="#talks" class="">all talks</a>
+  </p>
 </div> <!-- c4wd-talks-entry -->e
 
 

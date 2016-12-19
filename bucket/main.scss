@@ -3,15 +3,6 @@
 ---
 @charset "utf-8";
 
-@import "../_patterns/button.scss";
-@import "../_patterns/markdown.scss";
-
-
-// transform: translate(#{random(20) / 100}em, #{random(50) / -100}em) skew(#{random(15) / 10}deg, #{random(15) / -10}deg);
-
-// translate(#{random(20) / 100}em, #{random(50) / -100}em) skew(#{random(15) / 10}deg, #{random(15) / -10}deg);
-
-
 // $foreground: #FFDC00;
 // $background: #111;
 
@@ -24,6 +15,7 @@ $large: 1.62em;
 $xlarge: 2.62em;
 
 
+
 @mixin cartonize {
 
     background-color: $background;
@@ -33,6 +25,7 @@ $xlarge: 2.62em;
     transform: translate(#{random(50) / 100}em, #{random(50) / -100}em) skew(#{random(15) / 10}deg, #{random(15) / -10}deg);
 
   &::after {
+    pointer-events: none;
     content: " ";
     border: 3px solid $foreground;
     width: 100%;
@@ -43,6 +36,41 @@ $xlarge: 2.62em;
     transform-origin: center;
     transform: translate(#{random(50) / -100}em, #{random(50) / 100}em) skew(#{random(15) / -10}deg, #{random(15) / 10}deg) scale(0.95);
   }
+}
+
+@import "../_patterns/button.scss";
+@import "../_patterns/markdown.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+// transform: translate(#{random(20) / 100}em, #{random(50) / -100}em) skew(#{random(15) / 10}deg, #{random(15) / -10}deg);
+
+// translate(#{random(20) / 100}em, #{random(50) / -100}em) skew(#{random(15) / 10}deg, #{random(15) / -10}deg);
+
+
+
+
+
+
+.c4wd-talk-figure {
+  max-width: 100%;
+
+  .c4wd-speaker-image-wrapper {
+    @include cartonize;
+  }
+  img {
+    width: 100%;
+  }
+  figcaption {
+    @include cartonize;
+    position: relative;
+    top: -0.6em;
+    left: 1em;
+    display: inline-block;
+  }
+
 }
 
 .c4wd-speaker-figure {
@@ -288,4 +316,9 @@ label[for="nav-trigger"] {
   width: 100%;
   height: 100%;
   background-color:pink;
+}
+
+
+.c4wd-view {
+    padding-bottom: 4em;
 }
