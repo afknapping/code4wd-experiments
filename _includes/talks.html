@@ -1,10 +1,33 @@
 
-<div id="talks" class="c4wd-talks-index c4wd-view ">
+<div id="talks" class="c4wd-talks-index c4wd-markdown c4wd-view ">
 
 {% for talk in site.talks %}
 
   <div class="">
-    <a href="{{ talk.title | slugify | prepend:'#' }}">{{ talk.title }}</a>
+
+    <figure class="c4wd-talk-figure">
+      <a href="{{ talk.title | slugify | prepend:'#' }}">
+        <div class="c4wd-talk-image-wrapper">
+          <img src="{{ talk.title | slugify | prepend: '/bucket/' | prepend: site.baseurl | append: '.jpg' }} ">
+        </div>
+      </a>
+    <figcaption><h2><a href="{{ talk.title | slugify | prepend:'#' }}">{{ talk.title }}</a> <span>by <a href="{{ talk.speaker | slugify | prepend:'#' }}">{{ talk.speaker }}</a></span></h2></figcaption>
+  </figure>
+
+
+  {% for speaker in site.speakers %}
+
+    {% if talk.speaker == speaker.name %}
+      <a href="{{ talk.speaker | slugify | prepend:'#' }}">
+        <div class="c4wd-talk-index-image-wrapper">
+          <img src="{{ speaker.name | slugify | prepend:'/bucket/' | prepend: site.baseurl | append:'.jpg'}}">
+        </div>
+      </a>
+    {% endif %}
+  {% endfor %}
+
+
+
   </div>
 {% endfor %}
 </div>

@@ -14,7 +14,20 @@ $copy: 1em;
 $large: 1.62em;
 $xlarge: 2.62em;
 
+html {
+  // emulate mobile viewport
+  width: 320px;
+}
 
+
+// figure reset
+figure {
+    display: block;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
 
 @mixin cartonize($thick: false) {
 
@@ -56,14 +69,36 @@ $xlarge: 2.62em;
 // translate(#{random(20) / 100}em, #{random(50) / -100}em) skew(#{random(15) / 10}deg, #{random(15) / -10}deg);
 
 
-// figure reset
-figure {
-    display: block;
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-    -webkit-margin-start: 0;
-    -webkit-margin-end: 0;
+
+.c4wd-view {
 }
+
+.c4wd-talks-index {
+  // @include cartonize;
+}
+.c4wd-talk-index-image-wrapper {
+  @include cartonize;
+  width: 5em;
+  padding: 0;
+  position: relative;
+  top: -7em;
+  left: 14em;
+
+  img {
+    width: 100%;
+  }
+}
+
+.c4wd-markdown h2 {
+  position: relative;
+  left: -1.3em;
+  span {
+    font-size: 0.62em;
+  }
+
+}
+
+
 
 .c4wd-talk-image-wrapper {
   background-color: $background;
@@ -87,6 +122,7 @@ figure {
     top: -0.6em;
     left: 1em;
     display: inline-block;
+    max-width: 95%;
   }
 
 }
@@ -163,7 +199,7 @@ figure {
 
 .c4wd-body {
   min-height: 95vh;
-  background-image: url(/code4wd-experiments/bucket/testbg.svg);
+  background-image: url(/code4wd-experiments/bucket/3a95471428bb95734f6e7bca6d941275.jpg);
   background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
