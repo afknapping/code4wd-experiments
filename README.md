@@ -7,7 +7,14 @@ live: http://www.filtercake.com/code4wd-experiments/
 - `bundle exec jekyll serve` to start
 - open `http://127.0.0.1:4000/code4wd-experiments/` in a browser
 
-jekyll serve
+### [browsersync](https://www.browsersync.io/)?
+
+- `npm install` to install browser-sync
+- `foreman start` boots both jekyll and [a browsersync setup](https://github.com/jekyll/jekyll/issues/4644#issuecomment-228517258).
+
+it opens the correct port but **you have manually add the `baseurl` (`/code4wd-experiments/`)**
+
+
 
 ## Conventions
 

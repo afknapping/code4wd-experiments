@@ -1,0 +1,19 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "live: http://www.filtercake.com/code4wd-experiments/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filtercake/code4wd-experiments.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/filtercake/code4wd-experiments/issues"
+  },
+  "homepage": "https://github.com/filtercake/code4wd-experiments#readme"
+}
