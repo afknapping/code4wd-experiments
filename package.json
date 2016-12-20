@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/filtercake/code4wd-experiments/issues"
   },
-  "homepage": "https://github.com/filtercake/code4wd-experiments#readme"
+  "homepage": "https://github.com/filtercake/code4wd-experiments#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.5"
+  },
+  "dependencies": {
+    "eqcss": "^1.4.0"
+  }
 }
