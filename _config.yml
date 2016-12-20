@@ -22,8 +22,13 @@ collections:
 - speakers
 - patterns
 
+include:
+- node_modules
+
+keep_files:
+- bucket
+- node_modules
 
 # Build settings
 markdown: kramdown
-
 permalink: pretty
