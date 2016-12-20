@@ -27,6 +27,8 @@ figure {
     -webkit-margin-after: 0;
     -webkit-margin-start: 0;
     -webkit-margin-end: 0;
+
+    // max-width: 100%;
 }
 
 @mixin cartonize($thick: false) {
@@ -106,11 +108,11 @@ figure {
   margin-bottom: -1.5em;
 }
 
-
 .c4wd-talk-figure {
   max-width: 95%;
 
   .c4wd-speaker-image-wrapper {
+    max-width: 100%;
     @include cartonize;
   }
   img {
@@ -149,7 +151,7 @@ figure {
 
 
   .c4wd-speakers-index & {
-    width: 25%;
+    width: 100%;
     clear: none;
     margin: 0 1em 1em 0;
     // display: flex;
@@ -374,5 +376,7 @@ label[for="nav-trigger"] {
 
 
 .c4wd-view {
+    padding-top: 1em;
     padding-bottom: 4em;
+    max-width: 100%;
 }
