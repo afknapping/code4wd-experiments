@@ -3,16 +3,53 @@
 ---
 @charset "utf-8";
 
-// $foreground: #FFDC00;
-// $background: #111;
 
-$foreground: hsl(153, 43%, 42%);
-$background: white;
+// http://www.colourlovers.com/palette/44764/Rebel_Yell
+$colors: (
+  maverick: #AB4A37,
+  moon_ada: #347385,
+  misfit: #85D9F1,
+  defy: #4F514E,
+  caring: #DBC6A9
+);
 
+
+$foreground: map-get($colors, maverick);
+$background: lighten(map-get($colors, defy), 60);
+
+
+$countr: 0;
+@each $color, $value in $colors {
+  $countr: $countr + 1;
+  // @debug $countr;
+  // @debug $color;
+  // @debug "-----------";
+
+  .c4wd-ptl-newcolorswatch:nth-child(#{$countr}) {
+    display: inline-block;
+    background-color: $value;
+    width: 8em;
+    height: 5em;
+    color: white;
+    &::after {
+      content: '#{$color}';
+      /* offset-x | offset-y | blur-radius | color */
+      text-shadow: 1px 1px 0px black;
+      padding: 0.5em;
+      line-height: 3em;
+      font-weight: 900;
+      font-size: 12px;
+    }
+  }
+
+}
+
+// fontsizes TODO make map
 $small: .62em;
 $copy: 1em;
 $large: 1.62em;
 $xlarge: 2.62em;
+
 
 html {
   // emulate mobile viewport
@@ -66,11 +103,6 @@ figure {
   box-sizing: border-box;
 }
 
-// transform: translate(#{random(20) / 100}em, #{random(50) / -100}em) skew(#{random(15) / 10}deg, #{random(15) / -10}deg);
-
-// translate(#{random(20) / 100}em, #{random(50) / -100}em) skew(#{random(15) / 10}deg, #{random(15) / -10}deg);
-
-
 
 .c4wd-view {
 }
@@ -84,7 +116,7 @@ figure {
   padding: 0;
   position: relative;
   top: -7em;
-  left: 14em;
+  left: 15.5em;
 
   img {
     width: 100%;
@@ -204,9 +236,10 @@ figure {
 .c4wd-body {
   min-height: 95vh;
   background-image: url(/code4wd-experiments/bucket/3a95471428bb95734f6e7bca6d941275.jpg);
-  background-color: black;
+  background-color: $background;
   background-size: cover;
   background-repeat: no-repeat;
+  border-right: 1px solid black;
 }
 
 /*

@@ -111,7 +111,7 @@ Talks
 #### UI patterns
 
 ##### Atoms
-- markdown elements
+- [x] markdown elements
 - button
 - form elements
 - figcaption
