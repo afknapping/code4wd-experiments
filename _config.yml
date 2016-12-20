@@ -22,18 +22,19 @@ collections:
 - speakers
 - patterns
 
-# this is just to ovverride the default content of exclude
-# see https://jekyllrb.com/docs/configuration/
+# this is mostly to override the default content of exclude
+# although the updated version of minima brings excluding the
+# Gemfiles as default.
+# preferred would be to
+# include:
+#   - node_modules
+# see https://talk.jekyllrb.com/t/include-node-modules-does-not-include-node-modules/3441/
 exclude:
-- none
-
-# this does not work
-# if the order on https://jekyllrb.com/docs/configuration/ is relevant,
-# exclude is read after include. that way i can include node_modules
-# all day long – exclude does still filter it out because excluding is
-# happening after including
-# this is logical though not intuitive
-# include: ['node_modules']
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - Procfile
+  - README.md
 
 keep_files:
 - bucket
