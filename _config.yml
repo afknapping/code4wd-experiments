@@ -18,9 +18,9 @@ github_username:  fogelmania
 asset_path: "/bucket"
 
 collections:
-- talks
-- speakers
-- patterns
+  - talks
+  - speakers
+  - patterns
 
 # this is mostly to override the default content of exclude
 # although the updated version of minima brings excluding the
@@ -35,10 +35,11 @@ exclude:
   - package.json
   - Procfile
   - README.md
+  - bs-config.js
 
 keep_files:
-- bucket
-- node_modules
+  - bucket
+  - node_modules
 
 # Build settings
 markdown: kramdown
