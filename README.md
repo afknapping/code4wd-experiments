@@ -54,7 +54,7 @@ See `_includes/speakers.html` for variables in use.
 
 #### NOTES:
 
-- [ ] index grid speakers + detail, index grid talks + details
+- [x] index grid speakers + detail, index grid talks + details
 - [x] cfp
 - [ ] maybe sth like [bLazy.js – A lazyload image script | dinbror](http://dinbror.dk/blog/blazy/) to make initial rendering faster
 - [ ] Analog style:
@@ -62,7 +62,7 @@ See `_includes/speakers.html` for variables in use.
   + Ink Transition Effect: https://codyhouse.co/demo/ink-transition-effect/index.html
   + Glitch Effect on Text / Images / SVG:
 https://css-tricks.com/glitch-effect-text-images-svg/
-- [ ] ink to svg test, compare weight to pixel image
+- [x] ink to svg test, compare weight to pixel image
 - [ ] edit hotkey and links
 - [ ] ga
 - [x] mini pattern lab
@@ -107,3 +107,36 @@ Agenda
 Venue 
 Notes
 Talks
+
+#### UI patterns
+
+##### Atoms
+- markdown elements
+- button
+- form elements
+- figcaption
+- full width image
+
+
+##### Molecules
+- figure
+  + img-wrapper, img
+  + figcaption
+- form
+- speaker profile links
+- all talks / all speakers
+
+##### Organisms
+- full burger menu 
+- bottom quick nav
+- display matrix
+- index large nav
+
+##### Templates
+- view
+- speaker profile
+- talk details
+- agenda
+
+##### Pages
+
