@@ -101,11 +101,13 @@ figure {
 }
 
 
-
 .c4wd-talk-image-wrapper {
   background-color: $background;
   @include cartonize($thick: true);
-  margin-bottom: -1.5em;
+  // margin-bottom: -1.5em;
+  transform-origin: center;
+  transform: scale(1.2);
+  margin-top: 1em;
 }
 
 .c4wd-talk-figure {
@@ -260,9 +262,8 @@ main > *:target ~ * {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  /*max-width: 400px;*/
-  padding: 0 0 70px 0;
-  padding: 0em;
+  padding: 0;
+  margin: 0;
   }
 
 
