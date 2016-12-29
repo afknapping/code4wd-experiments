@@ -51,9 +51,11 @@ $large: 1.62em;
 $xlarge: 2.62em;
 
 
-html {
-  // emulate mobile viewport
-  width: 320px;
+.c4wd-body {
+  min-height: 95vh;
+  border-right: 1px solid black;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -98,6 +100,7 @@ figure {
 
 @import "../_patterns/button.scss";
 @import "../_patterns/markdown.scss";
+@import "../_patterns/00-layout-and-grid.scss";
 
 * {
   box-sizing: border-box;
@@ -233,14 +236,7 @@ figure {
   display: none;
 }
 
-.c4wd-body {
-  min-height: 95vh;
-  background-image: url(/code4wd-experiments/bucket/3a95471428bb95734f6e7bca6d941275.jpg);
-  background-color: $background;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-right: 1px solid black;
-}
+
 
 /*
 see [Reimagining Single-Page Applications With Progressive Enhancement – Smashing Magazine](https://www.smashingmagazine.com/2015/12/reimagining-single-page-applications-progressive-enhancement/)
@@ -293,19 +289,10 @@ main > *:target ~ * {
 // last checked: dec 2015
 */
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  padding: 0;
-  margin: 0;
-  }
-
 
 
 // from header
 
-* {
-  box-sizing: border-box;
-}
 
 #nav-trigger {
   /* critical styles - hide the checkbox input */
@@ -413,4 +400,9 @@ label[for="nav-trigger"] {
     padding-top: 1em;
     padding-bottom: 4em;
     max-width: 100%;
+}
+
+
+.c4wd-patternlab-entry {
+  overflow: hidden;
 }

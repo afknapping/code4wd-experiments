@@ -8,6 +8,8 @@ title: pattern lab
 
 [to index]({{ site.baseurl }}/)
 
+{{ site.patterns[0] }}
+
 ### Colors: ["Rebel Yell" palette on colourlovers](http://www.colourlovers.com/palette/44764/Rebel_Yell)
 
 <span class="c4wd-ptl-newcolorswatch"></span> <span class="c4wd-ptl-newcolorswatch"></span> <span class="c4wd-ptl-newcolorswatch"></span> <span class="c4wd-ptl-newcolorswatch"></span> <span class="c4wd-ptl-newcolorswatch"></span> <span class="c4wd-ptl-newcolorswatch"></span> <span class="c4wd-ptl-newcolorswatch"></span> <span class="c4wd-ptl-newcolorswatch"></span> <span class="c4wd-ptl-newcolorswatch"></span> <span class="c4wd-ptl-newcolorswatch"></span>
