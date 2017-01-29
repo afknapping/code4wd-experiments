@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-16 talks, 3 music shows, 5 Beers breaks.
+16 talks, 3 music shows, 5 Beers breaks. 
 
 # Schedule/ Main Stage
 - 08:00 Breakfast
