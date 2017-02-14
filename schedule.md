@@ -24,12 +24,10 @@ layout: default
 - 17:30 Rock & Roll
 
 # Schedule/ Tracks Room/ Workshops
-
-13:30 - 15:00 React Native Track (3 talks)
-15:30 - 17:30 Track B - (3 talks)
-Terraform related workshop
-Kubernetes related workshop
-Full stack applications using ES2015 and Angular2 - @tpiros 
+- 09:30 - 11:00 Kubernetes related workshop - @thesteve0
+- 11:30 - 13:00 Terraform related workshop
+- 13:30 - 15:00 React Native track (3 talks) 
+- 15:30 - 17:00 Full stack applications using ES2015 and Angular2 workshop- @tpiros 
 
 
 
