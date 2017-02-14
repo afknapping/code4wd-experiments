@@ -25,7 +25,7 @@ layout: default
 
 # Schedule/ Tracks Room
 
-13:30 - 15:00 Track a (3 talks)
+13:30 - 15:00 React Native Track (3 talks)
 
-15:30 - 17:30  Track b (3 talks)
+15:30 - 17:30  Workshop a
 
