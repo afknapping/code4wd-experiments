@@ -31,7 +31,7 @@ layout: default
 # Schedule/ Workshops
 
 13:30 - 15:00 Terraform related workshop
-Kubernetes related workshop
+13:30 - 15:00 Kubernetes related workshop
 Full stack applications using ES2015 and Angular2 - @tpiros 
 
 
