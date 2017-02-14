@@ -28,8 +28,9 @@ layout: default
 13:30 - 15:00 React Native Track (3 talks)
 15:30 - 17:30 Track B - (3 talks)
 
-# Schedule/ WOrkshop Room
-13:30 - 15:00
-15:30 - 17:30  @tpiros - Full stack applications using ES2015 and Angular2
+# Workshops
+Terraform related workshop
+Kubernetes related workshop
+@tpiros - Full stack applications using ES2015 and Angular2
 
 
