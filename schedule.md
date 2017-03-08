@@ -7,7 +7,7 @@ layout: default
 - 08:00 Breakfast
 - 09:00 Rock & Roll
 - 09:30 Speaker 1
-- 10:00 Aaron Bornstein,Open Source Engineer at Microsoft R&D Center in Herzelyia- Object Recognition in a Box: How we built a Semi-Automated Tagging Tool to help Identify Objects of Interest in Video with CNTK.
+- 10:00 Aaron Bornstein, open source engineer at Microsoft R&D Center in Herzelyia- Object Recognition in a Box: How we built a Semi-Automated Tagging Tool to help Identify Objects of Interest in Video with CNTK.
 - 10:30 @thesteve0 - 
 - 11:00 Beers Break
 - 11:30 @CyanMiller - 
