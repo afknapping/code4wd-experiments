@@ -6,8 +6,8 @@ layout: default
 # Schedule/ Main Stage
 - 08:00 Breakfast
 - 09:00 Rock & Roll
-- 09:30 <a href="{{ '/talks#talk-a' | prepend: site.baseurl }}" class="c4wd-xxxx">Talk a</a>
-- 10:00 <a href="{{ '/talks#talk-b' | prepend: site.baseurl }}" class="c4wd-xxxx">Talk b</a>
+- 09:30 Speaker 1
+- 10:00 Aaron Bornstein,Open Source Engineer at Microsoft R&D Center in Herzelyia- Object Recognition in a Box: How we built a Semi-Automated Tagging Tool to help Identify Objects of Interest in Video with CNTK.
 - 10:30 @thesteve0 - 
 - 11:00 Beers Break
 - 11:30 @CyanMiller - 
