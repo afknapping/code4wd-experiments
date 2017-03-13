@@ -3,7 +3,7 @@
 
   window.addEventListener("load", function(event) {
     console.log("All resources finished loading!");
-    // deployTheSticky();
+    deployTheSticky();
     // setInitialHeigh ();
 
 
@@ -36,7 +36,7 @@ function deployTheSticky () {
 // boundary the `sticky` class can be toggled
 // var boundary = $stickyHeaderRef.position().top;
 
-var boundary = 200;
+var boundary = 20;
 console.log(boundary);
 
 // when the page scrolls, do as little as possible, in this
@@ -52,14 +52,14 @@ function checkSticky() {
 
   // check if the element contains the `sticky` class already
   var isSticky = document.body.classList.contains('sticky');
-
-  console.log(isSticky);
-  console.log(document.body.classList);
+  console.log(document.querySelectorAll('.nav-trigger')[0].checked);
+  // console.log(isSticky);
+  // console.log(document.body.classList);
 
     if (y > boundary) {
     // if we're in the "sticky" boundary, and it's not already
     // sticky, then apply the class, otherwise do nothing.
-    console.log("yes");
+    // console.log("yes");
     if (!isSticky) {
  console.log(document.body.classList);     document.body.classList.add('sticky');
     }
@@ -67,6 +67,9 @@ function checkSticky() {
     // otherwise, we're inside the region *and* the sticky
     // class needs to be removed.
     document.body.classList.remove('sticky');
+    // also remove burger menu if open
+    document.querySelectorAll('.nav-trigger')[0].checked = false
+
   }
 
 

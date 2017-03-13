@@ -64,6 +64,7 @@ div {
     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+    // background-image: url(/code4wd-experiments/bucket/3a95471428bb95734f6e7bca6d941275.jpg)
 }
 
 
@@ -348,22 +349,37 @@ label[for="nav-trigger"] {
 
 #burger-menu {
   position: absolute;
-  bottom: -630px;
+
   background-color: black;
   padding: 1em;
   border: 2px solid black;
   line-height: 40px;
-  transition: bottom .2s ease-out, opacity .2s ease-out;
+  transition: all .2s ease-out;
   opacity: 0;
   z-index: -20;
 
+  @media all and (orientation: portrait) {
+    bottom: -630px;
+  }
+  @media all and (orientation: landscape) {
+    top: -630px;
+  }
+
+
+
 }
 .nav-trigger:checked ~ #burger-menu {
-  bottom: 80px;
-  opacity: .9;
+  @media all and (orientation: portrait) {
+    bottom: 80px;
+  }
+  @media all and (orientation: landscape) {
+    top: 80px;
+  }
+  opacity: 1;
 }
 
-.c4wd-nav {
+#quicknav {
+  // opacity: 0;
   background-color: white;
   color: black;
   font-weight: 900;
@@ -371,10 +387,43 @@ label[for="nav-trigger"] {
 
   position: fixed;
   z-index: 1000;
-  bottom: 0;
-  max-width: 400px;
-  width: 93%;
+  width: 100vw;
+  transition: all 0.3s ease-out;
+
+
 }
+
+
+
+  @media all and (orientation: portrait) {
+    #quicknav {
+       bottom: -10vh;
+       .sticky & {
+          bottom: 0;
+       }
+     }
+
+   }
+   @media all and (orientation: landscape) {
+    #quicknav {
+     top: -10vh;
+     .sticky & {
+         top: 0;
+       }
+     }
+   }
+
+
+
+.sticky #quicknav {
+  background-color: yellow;
+  /*display: block;
+  width: 100vw;*/
+  opacity: 1;
+}
+
+
+
 
 
 .c4wd-nav-item {
