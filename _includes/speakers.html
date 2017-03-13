@@ -2,6 +2,9 @@
 
 <!-- index -->
 <div id="speakers" class="c4wd-speakers-index c4wd-view debug">
+
+<h1>Speakers</h1>
+
 {% for speaker in site.speakers %}
   <!-- <div style="float: left; display: inline-block;"></div> -->
     <a href="{{ speaker.name | slugify | prepend:'#' }}">
