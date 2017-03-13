@@ -1,15 +1,15 @@
 ---
-name: Oren Eini
-twitter: ayende
-github: ayende
+name: Gil Zellner
+twitter: Zellner
+github: Zellner
 linkedin: 
 flickr: 
 instagram: 
 talk:
-title: Extreme Performance Architecture
+title: Babies
 past-talks:
 
 
 ---
 
-Oren is the founder of Hiberanting Rhinos and the main force behind the RavenDB database. He is a frequent writer under the pseudonym Ayende Rahien
+Gil is the...
