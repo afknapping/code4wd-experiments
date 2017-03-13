@@ -51,11 +51,19 @@ $large: 1.62em;
 $xlarge: 2.62em;
 
 
+div {
+  background-color: white;
+}
+
 .c4wd-body {
   min-height: 95vh;
   border-right: 1px solid black;
   margin: 0;
   padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 
@@ -108,6 +116,7 @@ figure {
 
 
 .c4wd-view {
+  background-color: white;
 }
 
 .c4wd-talks-index {
@@ -221,12 +230,13 @@ figure {
   border: 1px dotted black;
   padding: .5em;
 
-  background-color: hsla(210, 100%, 12%, 0.7);
+  // background-color: hsla(210, 100%, 12%, 0.7);
+  background-color: white;
   // border: 2px solid yellow;
-  color: hsl(52, 100%, 50%);
+  color: black;
 
   a {
-    color: white;
+    color: black;
     font-weight: 900;
   }
 
@@ -257,9 +267,6 @@ main > * {
 }
 
 
-nav, main > *:last-child {
-    // display: block;
-}
 
 @keyframes pulse {
     0% { transform: scale(1); }
@@ -271,6 +278,13 @@ nav, main > *:last-child {
   position: relative;
 }
 
+#home {
+    display: block;
+    opacity: 1;
+    z-index: -100;
+}
+
+
 main > *:target {
     display: block;
     // animation: pulse 0.2s ease-out 1;
@@ -281,6 +295,8 @@ main > *:target {
 main > *:target ~ * {
     display: none;
 }
+
+
 
 
 /*
