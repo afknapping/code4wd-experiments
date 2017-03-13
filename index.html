@@ -13,7 +13,6 @@ sections:
 - talks
 - Agenda
 - Venue
-- Notes
 - coc
 - cfp
 - Home
@@ -22,21 +21,16 @@ sections:
 ---
 
 
-
-<body class="c4wd-body">
-
 <!-- see [Reimagining Single-Page Applications With Progressive Enhancement – Smashing Magazine](https://www.smashingmagazine.com/2015/12/reimagining-single-page-applications-progressive-enhancement/) -->
 
 
-<main class="c4wd-main" role="main">
+<main id="main" class="c4wd-main" role="main">
 
     {% for section in page.sections %}
         {% include {{ section | slugify | append: '.html' }} %}
     {% endfor %}
 
 </main>
-
-
 
 
 <!--
@@ -46,21 +40,3 @@ sections:
 GitHub: <a href="https://github.com/filtercake/code4wd-experiments">filtercake/code4wd-experiments</a>
 </p>
  -->
-
-<!-- **************************** -->
-<!-- ********* DEFAULTS ********* -->
-<!-- **************************** -->
-
-<div id="debug-console" style="color: black; position: fixed; right: 1em; bottom: 5em;"></div>
-
-
-
-<script src="{{ 'EQCSS.min.js' | prepend:'/node_modules/eqcss/' | prepend: site.baseurl }}"></script>
-  </body>
-
-</html>
-
-
-
-
-

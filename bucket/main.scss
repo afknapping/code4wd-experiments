@@ -56,7 +56,7 @@ div {
 }
 
 .c4wd-body {
-  min-height: 95vh;
+  // min-height: 95vh;
   border-right: 1px solid black;
   margin: 0;
   padding: 0;
@@ -252,21 +252,6 @@ figure {
 see [Reimagining Single-Page Applications With Progressive Enhancement – Smashing Magazine](https://www.smashingmagazine.com/2015/12/reimagining-single-page-applications-progressive-enhancement/)
 */
 
-main > * {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity .4s;
-    max-height: 60vh;
-    overflow: hidden;
-    padding-bottom: 4em;
-
-
-}
-
-
 
 @keyframes pulse {
     0% { transform: scale(1); }
@@ -274,27 +259,58 @@ main > * {
     100% { transform: scale(1); }
 }
 
-.c4wd-main {
-  position: relative;
+
+
+
+#main > * {
+    display: none;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    opacity: 0;
+    transition: opacity .8s ease-out;
+    // max-height: 60vh;
+    overflow: hidden;
+    padding-bottom: 4em;
 }
 
-#home {
-    display: block;
-    opacity: 1;
-    z-index: -100;
-}
 
-
-main > *:target {
+#main > *:target {
     display: block;
     // animation: pulse 0.2s ease-out 1;
     opacity: 1;
     max-height: none;
+    z-index: 100;
+}
+
+#main > *:last-child {
+    display: block;
+    opacity: 1;
 }
 
 main > *:target ~ * {
-    display: none;
+    display: none !important;
+    opacity: 0 !important;
 }
+
+
+// .c4wd-main {
+//   position: relative;
+// }
+
+// #home {
+//     display: block;
+//     opacity: 1;
+//     z-index: -100;
+// }
+
+
+
+
+// #main > *:target ~ * {
+//     display: none;
+//     z-index: -100;
+// }
 
 
 
@@ -348,8 +364,8 @@ label[for="nav-trigger"] {
 }
 
 .c4wd-nav {
-  /*background-color: black;
-  color: white;*/
+  background-color: white;
+  color: black;
   font-weight: 900;
   box-shadow: 0px -5px 18px 0px rgba(50, 50, 50, 0.64);
 

@@ -1,4 +1,4 @@
-<header class="site-header debug">
+<header class="site-header debug" id="header">
 
 <div class="c4wd-hero">hero image
 
@@ -11,39 +11,6 @@
 
     <a class="site-title debug" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
-    <nav role="navigation" class="c4wd-nav debug">
-
-          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-          <label for="nav-trigger" class="c4wd-nav-item">X</label>
-
-          <span><a href="#speakers" class="c4wd-nav-item">Speakers</a></span>
-          <span><a href="#cfp" class="c4wd-nav-item">CFP</a></span>
-          <span><a href="#notes" class="c4wd-nav-item">Notes</a></span>
-          <span><a href="#ticket" class="c4wd-nav-item">Ticket</a></span>
-
-
-          <div id="burger-menu">
-              {% for section in page.sections %}
-                <!-- change span to li -->
-                <div><a href="#{{ section | slugify }}" class="c4wd-">{{ section }}</a></div>
-              {% endfor %}
-
-              {% if jekyll.environment == "development" %}
-              <hr>
-              <div style="font-size: .62em; line-height: 1.3;">
-                <p>dev:</p>
-
-              {% for page in site.pages %}
-                <div><a href="{{ page.url | prepend: site.baseurl }}" class="">{{ page.url }}</a></div>
-              {% endfor %}
-            {% endif %}
-                </div>
-          </div>
-
-    </nav>
-
-
-    </nav>
 
   </div>
 
