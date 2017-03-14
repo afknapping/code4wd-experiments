@@ -1,6 +1,6 @@
 ---
-title: Babies, a very difficult production system
-speaker: Gil Zellner
+title: Object Recognition in a Box
+speaker: Aaron Bornstein
 ---
 
-Gil is a......
+How we built a Semi-Automated Tagging Tool to help Identify Objects of Interest in Video with CNTK.
