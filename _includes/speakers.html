@@ -10,7 +10,7 @@
     <a href="{{ speaker.name | slugify | prepend:'#' }}">
       <figure class="c4wd-speaker-figure">
         <div class="c4wd-speaker-image-wrapper">
-          <img src="{{ speaker.name | slugify | prepend: '/bucket/' | prepend: site.baseurl | append: '.jpg' }} ">
+          <img src="{{ speaker.name | slugify | prepend: '/speakers/' | prepend: site.baseurl | append: '.jpg' }} ">
         </div>
         <figcaption>{{ speaker.name }}</figcaption>
       </figure>
@@ -35,7 +35,7 @@
 
   <figure class="c4wd-speaker-figure">
     <div class="c4wd-speaker-image-wrapper">
-      <img src="{{ speaker.name | slugify | prepend: '/bucket/' | prepend: site.baseurl | append: '.jpg' }} ">
+      <img src="{{ speaker.name | slugify | prepend: '/speakers/' | prepend: site.baseurl | append: '.jpg' }} ">
     </div>
     <figcaption>{{ speaker.name }}</figcaption>
   </figure>

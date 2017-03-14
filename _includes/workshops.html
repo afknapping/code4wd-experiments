@@ -1,0 +1,61 @@
+
+<!-- index: a list of all talks just by name and picture -->
+
+<div id="workshops" class="c4wd-talks-index c4wd-markdown c4wd-view ">
+
+<h1>Workshops</h1>
+
+
+{% for workshop in site.workshops %}
+
+  <div class="">
+
+    <figure class="c4wd-talk-figure">
+      <a href="{{ workshop.title | slugify | prepend:'#' }}">
+        <div class="c4wd-talk-image-wrapper">
+          <img src="{{ workshop.title | slugify | prepend: '/workshops/' | prepend: site.baseurl | append: '.jpg' }} ">
+        </div>
+      </a>
+    <figcaption><h2><a href="{{ workshop.title | slugify | prepend:'#' }}">{{ workshop.title }}</a> <span>by <a href="{{ workshop.speaker | slugify | prepend:'#' }}">{{ workshop.speaker }}</a></span></h2></figcaption>
+  </figure>
+
+
+  {% for speaker in site.speakers %}
+
+    {% if workshop.speaker == speaker.name %}
+      <a href="{{ workshop.speaker | slugify | prepend:'#' }}">
+        <div class="c4wd-talk-index-image-wrapper">
+          <img src="{{ speaker.name | slugify | prepend:'/workshops/' | prepend: site.baseurl | append:'.jpg'}}">
+        </div>
+      </a>
+    {% endif %}
+  {% endfor %}
+
+
+
+  </div>
+{% endfor %}
+</div>
+
+
+<!-- details: full entry for each talk with all data -->
+
+{% for workshop in site.workshop %}
+
+<div id="{{ workshop.title | slugify }}" class="c4wd-talks-entry c4wd-markdown c4wd-view">
+  <figure class="c4wd-talk-figure">
+    <div class="c4wd-talk-image-wrapper">
+      <img src="{{ workshop.title | slugify | prepend: '/workshops/' | prepend: site.baseurl | append: '.jpg' }} ">
+    </div>
+    <figcaption><h2>{{ workshop.title }}</h2></figcaption>
+  </figure>
+  <p>by <a href="{{ talk.speaker | slugify | prepend:'#' }}">{{ workshop.speaker }}</a></p>
+  {{ talk }}
+  <p>
+    <a href="#speakers" class="">all speakers</a> &nbsp; &nbsp; &nbsp;<a href="#workshop" class="">all workshops</a>
+  </p>
+</div> <!-- c4wd-talks-entry -->
+
+
+
+{% endfor %}
