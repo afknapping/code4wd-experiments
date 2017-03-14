@@ -15,8 +15,15 @@ live: http://www.filtercake.com/code4wd-experiments/
 it opens the correct port but **you have manually add the `baseurl` (`/code4wd-experiments/`)**
 
 
+## Content Model
 
-## Conventions
+    schedule.md
+    speakers/speaker-name.md
+    bucket/speaker-name.jpg
+    talks/talk-title.md
+    bucket/talk-title.jpg
+
+## Content details
 
 ### `talks`
 
