@@ -60,6 +60,11 @@ div {
   border-right: 1px solid black;
   margin: 0;
   padding: 0;
+
+  // Using System UI Fonts In Web Design: A Quick Practical Guide – Smashing Magazine
+  // http://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+  // last checked: dec 2015
+
   font-family: -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -75,8 +80,6 @@ figure {
     -webkit-margin-after: 0;
     -webkit-margin-start: 0;
     -webkit-margin-end: 0;
-
-    // max-width: 100%;
 }
 
 @mixin cartonize($thick: false) {
@@ -107,18 +110,15 @@ figure {
   }
 }
 
-@import "../_patterns/button.scss";
-@import "../_patterns/markdown.scss";
-@import "../_patterns/00-layout-and-grid.scss";
+// @import "../_patterns/button.scss";
+// @import "../_patterns/markdown.scss";
+// @import "../_patterns/00-layout-and-grid.scss";
 
 * {
   box-sizing: border-box;
 }
 
 
-.c4wd-view {
-  background-color: white;
-}
 
 .c4wd-talks-index {
   // @include cartonize;
@@ -269,7 +269,7 @@ see [Reimagining Single-Page Applications With Progressive Enhancement – Smash
     // top: 0;
     // left: 0;
     opacity: 0;
-    transition: opacity .8s ease-out;
+    transition: all .2s ease-out;
     // max-height: 60vh;
     overflow: hidden;
     padding-bottom: 4em;
@@ -293,25 +293,6 @@ main > *:target ~ * {
     display: none !important;
     opacity: 0 !important;
 }
-
-
-// .c4wd-main {
-//   position: relative;
-// }
-
-// #home {
-//     display: block;
-//     opacity: 1;
-//     z-index: -100;
-// }
-
-
-
-
-// #main > *:target ~ * {
-//     display: none;
-//     z-index: -100;
-// }
 
 
 
@@ -478,9 +459,12 @@ label[for="nav-trigger"] {
 
 
 .c4wd-view {
-    padding-top: 1em;
-    padding-bottom: 4em;
-    max-width: 100%;
+    transition: padding 0.2s ease-out;
+    padding-top: 0px;
+    .sticky & {
+      padding-top: 60px;
+    }
+    background-color: white;
 }
 
 
