@@ -6,7 +6,7 @@ linkedin:
 flickr: 
 instagram: 
 talk:
-title: Babies
+    title: Babies
 past-talks:
 
 
