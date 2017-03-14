@@ -17,11 +17,12 @@ it opens the correct port but **you have manually add the `baseurl` (`/code4wd-e
 
 ## Content Model
 
-    schedule.md
     speakers/speaker-name.md
     bucket/speaker-name.jpg
     talks/talk-title.md
     bucket/talk-title.jpg
+
+this might help with filenames: **[Slugify the-online-slug-generator](https://blog.tersmitten.nl/slugify/)**
 
 ## Content details
 

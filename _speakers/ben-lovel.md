@@ -6,7 +6,7 @@ linkedin:
 flickr: 
 instagram: 
 talk:
-    title: Extreme Performance Architecture
+    title:
 past-talks:
 
 
