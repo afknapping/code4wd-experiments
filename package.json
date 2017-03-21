@@ -20,6 +20,7 @@
     "browser-sync": "^2.18.5"
   },
   "dependencies": {
-    "eqcss": "^1.4.0"
+    "eqcss": "^1.4.0",
+    "normalize-css": "^2.3.1"
   }
 }

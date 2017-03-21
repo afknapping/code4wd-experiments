@@ -8,7 +8,7 @@ instagram:
 talk:
     title: IndexedDB, The Web Browser NoSQL Database
 past-talks:
-
+featured: true
 
 ---
 

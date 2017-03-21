@@ -16,16 +16,16 @@
 
 .c4wd-markdown {
   h1 {
-    @include cartonize;
+    // @include cartonize;
   }
   h2 {
-    @include cartonize;
-    &::after {
-      mix-blend-mode: multiply;
-    }
+    // @include cartonize;
+    // &::after {
+    //   mix-blend-mode: multiply;
+    // }
   }
   p {
-    @include cartonize;
+    // @include cartonize;
     max-width: 32em;
     padding: 1em 2em;
   }

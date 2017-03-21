@@ -84,12 +84,12 @@ function checkSticky() {
 
 window.onload = function () {
   data = read ( "c4wd" );
-  document.getElementById("notes-area").innerHTML = data;
+  // document.getElementById("notes-area").innerHTML = data;
 }
 
 function keyWasPressed(event) {
   console.log(event.keyCode);
-  data = document.getElementById("notes-area").value;
+  // data = document.getElementById("notes-area").value;
   // console.log(data);
   debug(data);
   persist ( "c4wd", data );

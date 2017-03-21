@@ -113,6 +113,8 @@ figure {
 // @import "../_patterns/button.scss";
 // @import "../_patterns/markdown.scss";
 // @import "../_patterns/00-layout-and-grid.scss";
+@import "../bucket/_normalize.scss";
+
 
 * {
   box-sizing: border-box;
@@ -124,7 +126,7 @@ figure {
   // @include cartonize;
 }
 .c4wd-talk-index-image-wrapper {
-  @include cartonize;
+  // @include cartonize;
   width: 5em;
   padding: 0;
   position: relative;
@@ -148,7 +150,7 @@ figure {
 
 .c4wd-talk-image-wrapper {
   background-color: $background;
-  @include cartonize($thick: true);
+  // @include cartonize($thick: true);
   // margin-bottom: -1.5em;
   transform-origin: center;
   transform: scale(1.2);
@@ -160,7 +162,7 @@ figure {
 
   .c4wd-speaker-image-wrapper {
     max-width: 100%;
-    @include cartonize;
+    // @include cartonize;
   }
   img {
     width: 100%;
@@ -183,13 +185,13 @@ figure {
   width: 62vw;
   float: left;
   .c4wd-speaker-image-wrapper {
-    @include cartonize;
+    // @include cartonize;
   }
   img {
     width: 100%;
   }
   figcaption {
-    @include cartonize;
+    // @include cartonize;
     position: relative;
     top: -0.6em;
     left: 1em;
@@ -206,7 +208,7 @@ figure {
 }
 
 .c4wd-speaker-links {
-  @include cartonize;
+  // @include cartonize;
   font-size: $small;
   width: 40%;
   padding-left: 2em;
@@ -217,7 +219,7 @@ figure {
 .c4wd-speaker-bio {
   clear: both;
   margin-bottom: 1em;
-  @include cartonize;
+  // @include cartonize;
 }
 
 
