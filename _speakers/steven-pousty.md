@@ -8,7 +8,7 @@ instagram:
 talk:
     title: 
 past-talks:
-
+featured: true
 
 ---
 
