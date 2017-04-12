@@ -12,7 +12,7 @@ live: http://www.filtercake.com/code4wd-experiments/
 - `npm install` to install browser-sync
 - `foreman start` boots both jekyll and [a browsersync setup](https://github.com/jekyll/jekyll/issues/4644#issuecomment-228517258).
 
-it opens the correct port but **you have manually add the `baseurl` (`/code4wd-experiments/`)**
+it opens the correct port but **you have to manually add the `baseurl` (`/code4wd-experiments/`)**
 
 
 ## Content Model

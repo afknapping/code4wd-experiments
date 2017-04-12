@@ -3,6 +3,39 @@
 ---
 @charset "utf-8";
 
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+
+  // Using System UI Fonts In Web Design: A Quick Practical Guide – Smashing Magazine
+  // http://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+  // last checked: dec 2015
+
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+
+.c4wd-ptl-colorswatch {
+  display: inline-block;
+  width: 13em;
+}
+.c4wd-ptl-colorswatch-color-field {
+  width: 8em;
+}
+.c4wd-ptl-colorswatch-color-field, .c4wd-ptl-colorswatch-label {
+  font-size: 0.62em;
+  height: 5em;
+  display: inline-block;
+}
+
 
 // http://www.colourlovers.com/palette/44764/Rebel_Yell
 $colors: (
@@ -52,202 +85,31 @@ $xlarge: 2.62em;
 
 div {
   background-color: white;
-}
-
-
-.c4wd-body {
-  min-height: 105vh;
-  border-right: 1px solid black;
-  margin: 0;
-  padding: 0;
-
-  // Using System UI Fonts In Web Design: A Quick Practical Guide – Smashing Magazine
-  // http://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
-  // last checked: dec 2015
-
-  font-family: -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-    // background-image: url(/code4wd-experiments/bucket/3a95471428bb95734f6e7bca6d941275.jpg)
-}
-
-
-// figure reset
-figure {
-    display: block;
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-    -webkit-margin-start: 0;
-    -webkit-margin-end: 0;
-}
-
-@mixin cartonize($thick: false) {
-
-    background-color: $background;
-    color: $foreground;
-    padding: 0.5em 1em;
-    transform-origin: center;
-    transform: translate(#{random(50) / 100}em, #{random(50) / -100}em) skew(#{random(15) / 10}deg, #{random(15) / -10}deg);
-
-  &::after {
-    pointer-events: none;
-    content: " ";
-    @if $thick {
-      border: 8px solid $foreground;
-    }
-    @else {
-      border: 3px solid $foreground;
-    }
-
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform-origin: center;
-    transform: translate(#{random(50) / -100}em, #{random(50) / 100}em) skew(#{random(15) / -10}deg, #{random(15) / 10}deg) scale(0.95);
-  }
-}
-
-// @import "../_patterns/button.scss";
-// @import "../_patterns/markdown.scss";
-// @import "../_patterns/00-layout-and-grid.scss";
-@import "../bucket/_normalize.scss";
-
-
-* {
-  box-sizing: border-box;
-}
-
-
-
-.c4wd-talks-index {
-  // @include cartonize;
-}
-.c4wd-talk-index-image-wrapper {
-  // @include cartonize;
-  width: 5em;
-  padding: 0;
-  position: relative;
-  top: -7em;
-  left: 15.5em;
-
-  img {
-    width: 100%;
-  }
-}
-
-.c4wd-markdown h2 {
-  position: relative;
-  left: -1.3em;
-  span {
-    font-size: 0.62em;
-  }
-
-}
-
-
-.c4wd-talk-image-wrapper {
-  background-color: $background;
-  // @include cartonize($thick: true);
-  // margin-bottom: -1.5em;
-  transform-origin: center;
-  transform: scale(1.2);
-  margin-top: 1em;
-}
-
-.c4wd-talk-figure {
-  max-width: 95%;
-
-  .c4wd-speaker-image-wrapper {
-    max-width: 100%;
-    // @include cartonize;
-  }
-  img {
-    width: 100%;
-  }
-  figcaption {
-    // @include cartonize;
-    position: relative;
-    top: -0.6em;
-    left: 1em;
-    display: inline-block;
-    max-width: 95%;
-  }
-
-}
-
-.c4wd-speaker-figure {
-  z-index: 1;
-  margin: 0;
-  clear: both;
-  width: 62vw;
-  float: left;
-  .c4wd-speaker-image-wrapper {
-    // @include cartonize;
-  }
-  img {
-    width: 100%;
-  }
-  figcaption {
-    // @include cartonize;
-    position: relative;
-    top: -0.6em;
-    left: 1em;
-    display: inline-block;
-  }
-
-
-  .c4wd-speakers-index & {
-    width: 100%;
-    clear: none;
-    margin: 0 1em 1em 0;
-    // display: flex;
-  }
-}
-
-.c4wd-speaker-links {
-  // @include cartonize;
-  font-size: $small;
-  width: 40%;
-  padding-left: 2em;
-  margin-left: 1em;
-}
-
-
-.c4wd-speaker-bio {
-  clear: both;
-  margin-bottom: 1em;
-  // @include cartonize;
-}
-
-
-
-/* BASE VARS, ARGH */
-/* need to douplicate stuff from jekyll config :( */
-
-
-.debug {
-
+  opacity: 0.8;
+  padding: 0.5em;
   border: 1px dotted black;
-  padding: .5em;
+}
 
-  // background-color: hsla(210, 100%, 12%, 0.7);
-  background-color: white;
-  // border: 2px solid yellow;
-  color: black;
 
-  a {
-    color: black;
-    font-weight: 900;
+.c4wd-markdown {
+  p {
+    max-width: 32em;
+    // padding: 1em 2em;
+
   }
-
+  img {
+    // cartonizing should be done by wrapper element
+    // because img does not support ::after
+    // padding: 0.5em;
+    // border: 3px solid $foreground;
+  }
+  a {
+    font-weight: 900;
+    color: inherit;
+  }
+  span {}
 }
 
-#debug-console {
-  display: none;
-}
 
 
 
@@ -261,9 +123,6 @@ see [Reimagining Single-Page Applications With Progressive Enhancement – Smash
     50% { transform: scale(1.03); }
     100% { transform: scale(1); }
 }
-
-
-
 
 #main > * {
     display: none;
@@ -298,15 +157,6 @@ main > *:target ~ * {
 
 
 
-
-/*
-// Using System UI Fonts In Web Design: A Quick Practical Guide – Smashing Magazine
-// http://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
-// last checked: dec 2015
-*/
-
-
-
 // from header
 
 
@@ -331,26 +181,24 @@ label[for="nav-trigger"] {
 
 
 #burger-menu {
-  position: absolute;
+  // position: absolute;
 
-  background-color: black;
-  padding: 1em;
-  border: 2px solid black;
-  line-height: 40px;
-  transition: all .2s ease-out;
-  opacity: 0;
-  z-index: -20;
+  // background-color: black;
+  // padding: 1em;
+  // border: 2px solid black;
+  // line-height: 40px;
+  // transition: all .2s ease-out;
+  // opacity: 0;
+  // z-index: -20;
 
-  @media all and (orientation: portrait) {
-    bottom: -630px;
-  }
-  @media all and (orientation: landscape) {
-    top: -630px;
-  }
-
-
-
+  // @media all and (orientation: portrait) {
+  //   bottom: -630px;
+  // }
+  // @media all and (orientation: landscape) {
+  //   top: -630px;
+  // }
 }
+
 .nav-trigger:checked ~ #burger-menu {
   @media all and (orientation: portrait) {
     bottom: 80px;
@@ -368,9 +216,9 @@ label[for="nav-trigger"] {
   font-weight: 900;
   box-shadow: 0px -5px 18px 0px rgba(50, 50, 50, 0.64);
 
-  position: fixed;
-  z-index: 1000;
-  width: 100vw;
+  // position: fixed;
+  // z-index: 1000;
+  // width: 100vw;
   transition: all 0.3s ease-out;
 
 
@@ -433,20 +281,8 @@ label[for="nav-trigger"] {
 }
 
 
-// from index
 
-  .c4wd-ptl-colorswatch {
-    display: inline-block;
-    width: 13em;
-  }
-  .c4wd-ptl-colorswatch-color-field {
-    width: 8em;
-  }
-  .c4wd-ptl-colorswatch-color-field, .c4wd-ptl-colorswatch-label {
-    font-size: 0.62em;
-    height: 5em;
-    display: inline-block;
-  }
+
 
 
 
@@ -461,12 +297,8 @@ label[for="nav-trigger"] {
 
 
 .c4wd-view {
-    transition: padding 0.2s ease-out;
-    padding-top: 0px;
-    .sticky & {
-      padding-top: 60px;
-    }
-    background-color: white;
+  transition: padding 0.2s ease-out;
+  padding-top: 0px;
 }
 
 
@@ -474,6 +306,3 @@ label[for="nav-trigger"] {
   overflow: hidden;
 }
 
-img {
-  max-width: 100px;
-}

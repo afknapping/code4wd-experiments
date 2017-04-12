@@ -1,5 +1,4 @@
 ---
-layout: default
 title: home
 
 
@@ -16,28 +15,42 @@ sections:
 - Venue
 - coc
 - cfp
+- patterns
 - Home
 
 ---
 
+<!DOCTYPE html>
+<html>
 
-<!-- see [Reimagining Single-Page Applications With Progressive Enhancement – Smashing Magazine](https://www.smashingmagazine.com/2015/12/reimagining-single-page-applications-progressive-enhancement/) -->
+  {% include head.html %}
+
+  <body class="c4wd-body">
+
+    {% include header.html %}
+    {% include nav.html %}
+
+    <main id="main" class="c4wd-main" role="main">
+      <!-- see [Reimagining Single-Page Applications With Progressive Enhancement – Smashing Magazine](https://www.smashingmagazine.com/2015/12/reimagining-single-page-applications-progressive-enhancement/) -->
 
 
-<main id="main" class="c4wd-main" role="main">
+      {% for section in page.sections %}
+          {% include {{ section | slugify | append: '.html' }} %}
+      {% endfor %}
 
-    {% for section in page.sections %}
-        {% include {{ section | slugify | append: '.html' }} %}
-    {% endfor %}
+    </main>
 
-</main>
+  {% include footer.html %}
 
 
-<!--
-<hr>
+  <!--
+  <hr>
 
-<p class="debug">
-GitHub: <a href="https://github.com/filtercake/code4wd-experiments">filtercake/code4wd-experiments</a>
-</p>
- -->
+  <p class="debug">
+  GitHub: <a href="https://github.com/filtercake/code4wd-experiments">filtercake/code4wd-experiments</a>
+  </p>
+   -->
 
+  </body>
+
+</html>
